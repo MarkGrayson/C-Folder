@@ -1,15 +1,17 @@
 //
-//  main.cpp
+//  AfternoonRunner.cpp
 //  FirstAfternoonCPlusPlus
 //
 //  Created by Palesh, Mark on 1/23/17.
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#include <iostream>
+#include "FirstController.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main()
+{
+    FirstController * app;
+    app->start();
+    
     return 0;
 }
