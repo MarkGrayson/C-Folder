@@ -36,4 +36,7 @@ void FirstController :: specialOutput()
     cout << "What is your full name?" << endl;
     getline(cin, name);
     cout << name << endl;
+    
+    
+    
 }

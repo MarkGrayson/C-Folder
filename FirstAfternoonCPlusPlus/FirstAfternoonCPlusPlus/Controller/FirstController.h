@@ -16,5 +16,10 @@ private:
 public:
     void start();
     
+    public : int arrayCar [ 10 ];
+    
+    public : double arrayVechicle [ 20 ];
+    
+    
 };
 #endif // FirstController_h
