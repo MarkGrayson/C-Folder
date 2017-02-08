@@ -11,4 +11,18 @@
 
 #include <stdio.h>
 
-#endif /* FirstMegaData_hpp */
+class IntNodeArray
+{
+private:
+    IntNode * front;
+    int size;
+    
+public:
+    IntNodeArray(int size);
+    void setAtIndex(int index, int value);
+    int getForIndex(int index);
+    int getSize();
+};
+
+
+#endif /* IntArray_hpp */
