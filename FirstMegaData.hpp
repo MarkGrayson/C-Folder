@@ -1,14 +1,14 @@
 //
-//  IntNode.hpp
+//  FirstMegaData.hpp
 //  FirstAfternoonCPlusPlus
 //
 //  Created by Palesh, Mark on 2/6/17.
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#ifndef IntNode_hpp
-#define IntNode_hpp
+#ifndef FirstMegaData_hpp
+#define FirstMegaData_hpp
 
 #include <stdio.h>
 
-#endif /* IntNode_hpp */
+#endif /* FirstMegaData_hpp */
