@@ -8,25 +8,43 @@
 
 #include <iostream>
 #include "FirstController.h"
-#include "../Model.IntNode.hpp"
+#include "/Users/mpal7487/Documents/C++ Folder/FirstMegaData.hpp"
 using namespace std;
 
-FirstController ::
-    FirstController()
+FirstController ::  FirstController()
 {
     
 }
 
 void FirstController :: start()
 {
-    cout << "Starting the project" << end1;
+    cout << "Starting the project" << endl;
     
-    cout << "Switching to the array testing" << end1;
+    cout << "Switching to the array testing" << endl;
     testIntArray();
-    cout << "Finished testing" << end1;
+    cout << "Finished testing" << endl;
 }
 
 void FirstController :: testIntArray()
 {
-    cout << "Testing the array" << end1;
+    cout << "Testing the array" << endl;
+    
+    IntNodeArray temp = IntNodeArray(3);
+    
+    for (int index = 0; index < 3; index++)
+    {
+        cout << temp.getFromIndex(index) << " is at spot  "<< index << endl;
+    }
+    
+    cout << "Testing input" << endl;
+    
+    for(int index = 0; index < 3; index++)
+    {
+        temp.setAtIndex(index, index);
+    }
+    
+    for(int index = 0; index < temp.getSize(); index++)
+    {
+        cout << temp.getFromIndex(index) << " is at spot " << index << endl;
+    }
 }
