@@ -9,7 +9,7 @@
 #ifndef FirstMegaData_hpp
 #define FirstMegaData_hpp
 
-#include <stdio.h>
+#include "IntNode.hpp"
 
 class IntNodeArray
 {
@@ -20,7 +20,7 @@ private:
 public:
     IntNodeArray(int size);
     void setAtIndex(int index, int value);
-    int getForIndex(int index);
+    int getFromIndex(int index);
     int getSize();
 };
 

@@ -12,8 +12,10 @@
 class FirstController
 {
 private:
-    void specialOutput();
+    void testIntArray();
+    
 public:
+    FirstController();
     void start();
     
     public : int arrayCar [ 10 ];
