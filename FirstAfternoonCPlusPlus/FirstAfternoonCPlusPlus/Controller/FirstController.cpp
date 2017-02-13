@@ -13,9 +13,7 @@ using namespace std;
 
 FirstController ::  FirstController()
 {
-    
 }
-
 void FirstController :: start()
 {
     cout << "Starting the project" << endl;
