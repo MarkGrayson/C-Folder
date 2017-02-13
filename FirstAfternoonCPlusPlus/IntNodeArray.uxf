@@ -16,8 +16,8 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>30</y>
+      <x>340</x>
+      <y>20</y>
       <w>410</w>
       <h>240</h>
     </coordinates>
@@ -34,6 +34,46 @@ bg=blue</panel_attributes>
 + IntNode() : constructor
 + IntNode(Int value): init
 + IntNode(Int value, IntNode * nextNode) : constructor
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>340</y>
+      <w>580</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+Data Members
+- nodeData : Type
+- nodePointer : Node&lt;Type&gt; *
+--
+Constructors
+
++ Node() : constructor
++ Node(Type value) : constructor
++ Node(Type data, Node&lt;Type&gt; * pointer) : constructor
+
+Methods
+
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; *
++ setNodeData(Type data) : void
++ setNodePointer(Node&lt;Type&gt; * next) : void
 </panel_attributes>
     <additional_attributes/>
   </element>
