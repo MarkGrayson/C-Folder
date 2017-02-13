@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3202FF181E523E9100CBE51D /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = ../Model/Node.hpp; sourceTree = "<group>"; };
 		32A6BA721E368F9C00987E03 /* FirstAfternoonCPlusPlus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstAfternoonCPlusPlus; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AfternoonRunner.cpp; path = Controller/AfternoonRunner.cpp; sourceTree = "<group>"; };
 		32A6BA7E1E36958F00987E03 /* FirstController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirstController.cpp; path = Controller/FirstController.cpp; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		32A6BA691E368F9B00987E03 = {
 			isa = PBXGroup;
 			children = (
+				3202FF181E523E9100CBE51D /* Node.hpp */,
 				32AA949D1E49121500DBE8DF /* FirstMegaData.cpp */,
 				32AA949E1E49121500DBE8DF /* FirstMegaData.hpp */,
 				32AA949A1E490F6A00DBE8DF /* IntNode.cpp */,
