@@ -6,8 +6,8 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#ifndef IntNodeArray.hpp
-#define IntNodeArray.hpp
+#ifndef IntNodeArray_hpp
+#define IntNodeArray_hpp
 
 #include "IntNode.hpp"
 

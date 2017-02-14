@@ -8,12 +8,12 @@
 
 #include <iostream>
 #include "FirstController.h"
-#include "/Users/mpal7487/Documents/C++ Folder/FirstMegaData.hpp"
+
 using namespace std;
 
 FirstController ::  FirstController()
 {
-    wordNode = Node<string>("derpy mcderpface")'
+    wordNode = Node<string>("derpy mcderpface");
     numberNode = Node<int>();
 }
 

@@ -9,7 +9,8 @@
 #ifndef FirstController_h
 #define FirstController_h
 
-#include "/Users/mpal7487/Documents/C++ Folder/FirstMegaData.hpp"
+#include "../Model/Node.hpp"
+#include "../Model/IntNodeArray.hpp"
 #include <string>
 
 using namespace std;

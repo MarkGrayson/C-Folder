@@ -6,7 +6,7 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#include "IntNodeArray.cpp"
+#include "IntNodeArray.hpp"
 #include <assert.h>
 
 IntNodeArray :: IntNodeArray(int size)

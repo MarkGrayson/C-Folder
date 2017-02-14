@@ -45,7 +45,7 @@ Node<Type> :: Node(Type data)
 }
 
 template <class Type>
-Node<Type :: Node(Type data, Node<Type * pointer)
+Node<Type> :: Node(Type data, Node<Type> * pointer)
 {
     this->nodePointer = nodePointer;
     this->nodeData = data;
@@ -54,7 +54,7 @@ Node<Type :: Node(Type data, Node<Type * pointer)
 template <class Type>
 void Node<Type> :: setNodeData(Type data)
 {
-    nodeData = newData;
+    nodeData = data;
 }
 
 template <class Type>
