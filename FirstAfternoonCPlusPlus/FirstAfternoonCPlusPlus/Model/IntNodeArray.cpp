@@ -6,7 +6,7 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#include "FirstMegaData.hpp"
+#include "IntNodeArray.cpp"
 #include <assert.h>
 
 IntNodeArray :: IntNodeArray(int size)

@@ -6,8 +6,8 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#ifndef FirstMegaData_hpp
-#define FirstMegaData_hpp
+#ifndef IntNodeArray.hpp
+#define IntNodeArray.hpp
 
 #include "IntNode.hpp"
 

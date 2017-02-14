@@ -13,6 +13,16 @@ using namespace std;
 
 FirstController ::  FirstController()
 {
+    wordNode = Node<string>("derpy mcderpface")'
+    numberNode = Node<int>();
+}
+
+void FirstController :: testNodes()
+{
+    cout << "The contents of the Node<string>" << endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
 void FirstController :: start()
 {

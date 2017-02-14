@@ -9,19 +9,22 @@
 #ifndef FirstController_h
 #define FirstController_h
 
+#include "/Users/mpal7487/Documents/C++ Folder/FirstMegaData.hpp"
+#include <string>
+
+using namespace std;
+
 class FirstController
 {
 private:
     void testIntArray();
-    
+    Node<int> numberNode;
+    Node<string> wordNode;
+    void testNodes();
 public:
     FirstController();
     void start();
     
-    public : int arrayCar [ 10 ];
-    
-    public : double arrayVechicle [ 20 ];
-    
-    
 };
+
 #endif // FirstController_h

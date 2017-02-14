@@ -40,17 +40,6 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>20</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>SimpleClass</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>150</x>
       <y>340</y>
       <w>580</w>

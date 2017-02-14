@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		329035BE1E53820600A668B0 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329035B91E53820600A668B0 /* IntNode.cpp */; };
+		329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329035BB1E53820600A668B0 /* IntNodeArray.cpp */; };
 		32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */; };
 		32A6BA7F1E36958F00987E03 /* FirstController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BA7E1E36958F00987E03 /* FirstController.cpp */; };
-		32AA949C1E490F6A00DBE8DF /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AA949A1E490F6A00DBE8DF /* IntNode.cpp */; };
-		32AA949F1E49121500DBE8DF /* FirstMegaData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AA949D1E49121500DBE8DF /* FirstMegaData.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,15 +26,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3202FF181E523E9100CBE51D /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = ../Model/Node.hpp; sourceTree = "<group>"; };
+		329035B91E53820600A668B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
+		329035BA1E53820600A668B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
+		329035BB1E53820600A668B0 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
+		329035BC1E53820600A668B0 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
+		329035BD1E53820600A668B0 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
 		32A6BA721E368F9C00987E03 /* FirstAfternoonCPlusPlus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstAfternoonCPlusPlus; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AfternoonRunner.cpp; path = Controller/AfternoonRunner.cpp; sourceTree = "<group>"; };
 		32A6BA7E1E36958F00987E03 /* FirstController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirstController.cpp; path = Controller/FirstController.cpp; sourceTree = "<group>"; };
 		32A6BA801E36987A00987E03 /* FirstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = Controller/FirstController.h; sourceTree = "<group>"; };
-		32AA949A1E490F6A00DBE8DF /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = ../Model/IntNode.cpp; sourceTree = "<group>"; };
-		32AA949B1E490F6A00DBE8DF /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = ../Model/IntNode.hpp; sourceTree = "<group>"; };
-		32AA949D1E49121500DBE8DF /* FirstMegaData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirstMegaData.cpp; path = ../FirstMegaData.cpp; sourceTree = "<group>"; };
-		32AA949E1E49121500DBE8DF /* FirstMegaData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FirstMegaData.hpp; path = ../FirstMegaData.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,14 +48,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		329035B71E5381D700A668B0 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */,
+				32A6BA7E1E36958F00987E03 /* FirstController.cpp */,
+				32A6BA801E36987A00987E03 /* FirstController.h */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		329035C01E53821800A668B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				329035B91E53820600A668B0 /* IntNode.cpp */,
+				329035BA1E53820600A668B0 /* IntNode.hpp */,
+				329035BB1E53820600A668B0 /* IntNodeArray.cpp */,
+				329035BC1E53820600A668B0 /* IntNodeArray.hpp */,
+				329035BD1E53820600A668B0 /* Node.hpp */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		32A6BA691E368F9B00987E03 = {
 			isa = PBXGroup;
 			children = (
-				3202FF181E523E9100CBE51D /* Node.hpp */,
-				32AA949D1E49121500DBE8DF /* FirstMegaData.cpp */,
-				32AA949E1E49121500DBE8DF /* FirstMegaData.hpp */,
-				32AA949A1E490F6A00DBE8DF /* IntNode.cpp */,
-				32AA949B1E490F6A00DBE8DF /* IntNode.hpp */,
 				32A6BA741E368F9C00987E03 /* FirstAfternoonCPlusPlus */,
 				32A6BA731E368F9C00987E03 /* Products */,
 			);
@@ -72,9 +89,8 @@
 		32A6BA741E368F9C00987E03 /* FirstAfternoonCPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
-				32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */,
-				32A6BA7E1E36958F00987E03 /* FirstController.cpp */,
-				32A6BA801E36987A00987E03 /* FirstController.h */,
+				329035C01E53821800A668B0 /* Model */,
+				329035B71E5381D700A668B0 /* controller */,
 			);
 			path = FirstAfternoonCPlusPlus;
 			sourceTree = "<group>";
@@ -136,9 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329035BE1E53820600A668B0 /* IntNode.cpp in Sources */,
+				329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */,
 				32A6BA7F1E36958F00987E03 /* FirstController.cpp in Sources */,
-				32AA949C1E490F6A00DBE8DF /* IntNode.cpp in Sources */,
-				32AA949F1E49121500DBE8DF /* FirstMegaData.cpp in Sources */,
 				32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
