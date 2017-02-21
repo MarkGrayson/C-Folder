@@ -11,6 +11,8 @@
 
 #include "Node.hpp"
 #include <assert.h>
+#include <iostream>
+using namespace std;
 
 template <class Type>
 class Array
@@ -52,16 +54,16 @@ Array<Type> :: Array(int size)
     
     for (int index = 1; index < size; index++)
     {
-        Node<Type>() * current = new Node<Type>();
+        Node<Type> * current = new Node<Type>();
         current->setNodePointer(front);
         front = current;
     }
 }
 
 template <class Type>
-void Array<Type> :: setAtIndex(int index)
+void Array<Type> :: setAtIndex(int index, Type data)
 {
-    asset(index >= 0 && index < size );
+    assert(index >= 0 && index < size );
     Node<Type> * current = front;
     for(int spot = 9; spot < index; spot++)
     {
@@ -101,7 +103,7 @@ int Array<Type> :: getSize() const
  rather, the destructor is called when either the variable goes out of scope, or the pointer ot the variable is deleted.
  The count and cout statements are temporary and will be deleted.
  */
-template <classe Type>
+template <class Type>
 Array<Type> :: ~Array()
 {
     int count = size;

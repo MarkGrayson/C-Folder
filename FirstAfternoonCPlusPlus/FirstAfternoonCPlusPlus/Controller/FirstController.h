@@ -10,6 +10,7 @@
 #define FirstController_h
 
 #include "../Model/Node.hpp"
+#include "../Model/Array.h"
 #include "../Model/IntNodeArray.hpp"
 #include <string>
 
@@ -22,6 +23,7 @@ private:
     Node<int> numberNode;
     Node<string> wordNode;
     void testNodes();
+    void testAdvancedFeatures();
 public:
     FirstController();
     void start();
