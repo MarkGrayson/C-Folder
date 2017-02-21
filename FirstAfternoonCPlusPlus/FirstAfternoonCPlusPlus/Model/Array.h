@@ -88,15 +88,17 @@ Type Array<Type> :: getFromIndex(int index)
 }
 
 template <class Type>
-int Array<Type> :: getSize()
+int Array<Type> :: getSize() const
 {
     return size;
 }
 
 
 /*
- The role of the destuctor is to de-allocate all memory called by the use of the 'new' keyword. This is to prevent problems such as memory leaks.
- The destuctor is Never called by the programmer; rather, the destructor is called when either the variable goes out of scope, or the pointer ot the variable is deleted.
+ The role of the destuctor is to de-allocate all memory called by the use of the 'new' keyword.
+ This is to prevent problems such as memory leaks.
+ The destuctor is Never called by the programmer; 
+ rather, the destructor is called when either the variable goes out of scope, or the pointer ot the variable is deleted.
  The count and cout statements are temporary and will be deleted.
  */
 template <classe Type>
@@ -116,4 +118,48 @@ Array<Type> :: ~Array()
         cout << "Front is at: " << front << " count is: " << count << endl;
     }
 }
+/*
+ The copy constructor is called when you create a instance of
+ and object by assigning it via the assignment operator (=).
+ The default copy constructor only creates a shallow copy, so 
+ when building custom objects you must override the copy constuctor 
+ C++ unlike Java/Swift does NOT support calling another constuctor in a 
+ constuctor.
+ */
+template <class Type>
+Array<Type> :: Array(const Array<Type> & toBeCopied)
+{
+    this->size = toBeCopied.getSize();
+    
+    //Build Data Stucture
+    this->front = new Node<Type>();
+    for(int index = 1; index < size; index++)
+    {
+        Node<Type> * temp = new Node<Type>();
+        temp->setNodePointer(front);
+        front = temp;
+    }
+    //Copy values into new Array.
+    //This could be done at the same time as the build step
+    //but this is easier to explain.
+    Node<Type> * copyTemp = toBeCopied.getFront();
+    Node<Type> * updated = this->front;
+    for(int index = 0 ; index < size; index ++)
+    {
+        updated->setNodeData(copyTemp->getNodeData());
+        updated = updated->getNodePointer();
+        copyTemp = copyTemp->getNodePointer();
+    }
+    
+}
+
+/*
+ The const modifier at the end of the method is used to denote that the method does not impact the state of teh object.
+ */
+template <class Type>
+Node<Type> * Array<Type> :: getFront() const
+{
+    return front;
+}
+
 #endif /* Array_h */
