@@ -92,4 +92,28 @@ int Array<Type> :: getSize()
 {
     return size;
 }
+
+
+/*
+ The role of the destuctor is to de-allocate all memory called by the use of the 'new' keyword. This is to prevent problems such as memory leaks.
+ The destuctor is Never called by the programmer; rather, the destructor is called when either the variable goes out of scope, or the pointer ot the variable is deleted.
+ The count and cout statements are temporary and will be deleted.
+ */
+template <classe Type>
+Array<Type> :: ~Array()
+{
+    int count = size;
+    Node<Type> * remove = front;
+    while(front != nullptr)
+    {
+        //Move to next node in array
+        front = front->getNodePointer();
+        cout << "Moving to the next node. At: " << count << endl;
+        //Move delete to the new front.
+        remove = front;
+        cout << "Moving to new front pointer." << endl;
+        count--;
+        cout << "Front is at: " << front << " count is: " << count << endl;
+    }
+}
 #endif /* Array_h */
