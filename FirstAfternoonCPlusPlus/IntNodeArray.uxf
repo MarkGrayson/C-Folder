@@ -160,7 +160,8 @@ bg=green</panel_attributes>
 + getFromIndex(int index) : Type
 + contains(Type data) : bool
 + getSize() const: int
-+ getFront() const : Node&lt;Type&gt; *</panel_attributes>
++ getFront() const : Node&lt;Type&gt; *
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
