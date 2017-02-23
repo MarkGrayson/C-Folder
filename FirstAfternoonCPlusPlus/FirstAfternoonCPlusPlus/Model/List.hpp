@@ -71,7 +71,102 @@ void List<Type> :: addEnd(Type data)
         this->end = added;
     }
     size++;
-
 }
+
+template <class Type>
+void List<Type> :: addAtIndex(int index, Type value)
+{
+    assert(index >= 0 && index <= size);
+    if(index == 0)
+    {
+        addFront(value);
+    }
+    else if(index == size)
+    {
+        addEnd(value);
+    }
+    else
+    {
+        Node<Type>* insertedNode = new Node<Type>(value);
+        Node<Type> * current = front;
+        Node<Type> * previous = nullptr;
+        
+        for(int position = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getNodePointer();
+        }
+        
+        previous->setNodePointer(insertedNode);
+        insertedNode->setNodePointer(current);
+        
+        size++;
+    }
+}
+
+template <class Type>
+Type List<Type> :: setAtIndex(int index, Type data)
+{  }
+
+template <class Type>
+Type List<Type> :: getFromIndex(int index)
+{
+    Type List<Type> :: remove(int index)
+    {
+        assert(index >= 0 && index < size);
+        Type removed;
+        
+        Node<Type> * current = front;
+        Node<Type> * previous = nullptr;
+        Node<Type> * toBeRemoved = nullptr;
+        
+        if(index == 0)
+        {
+            toBeRemoved = front;
+            this->front = front->getNodePointer();
+        }
+        else if (index == size - 1)
+        {
+            for(int spot = 0; spot < index; spot++)
+            {
+                previous = current;
+                current = current->getNodePointer();
+            }
+            
+            toBeRemoved = current;
+            previous->setNodePointer(nullptr);
+            this->end = previous;
+        }
+        else
+        {
+            for(int spot = 0; spot < index; spot++)
+            {
+                previous = current;
+                current = current->getNodePointer();
+            }
+            
+            toBeRemoved = current;
+        }
+        
+        toBeRemoved = current;
+        current = toBeRemoved->getNodePointer();
+        previous->setNodePointer(current);
+        
+    }
+    removed = toBeRemoved->getNodeData();
+    
+    delete toBeRemoved;
+    
+    size--;
+    return removed;
+}
+
+template <class Type>
+Type List<Type> :: remove(int index)
+{  }
+
+template <class Type>
+bool List<Type> :: contains(Type findMe)
+{  }
 
 #endif /* Header_h */
