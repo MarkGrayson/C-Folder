@@ -13,6 +13,7 @@
 #include "../Model/Array.h"
 #include "../Model/IntNodeArray.hpp"
 #include <string>
+#include "../Model/List.hpp"
 
 using namespace std;
 

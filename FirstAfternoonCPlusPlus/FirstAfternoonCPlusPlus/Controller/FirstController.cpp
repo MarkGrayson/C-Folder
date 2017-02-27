@@ -75,3 +75,20 @@ void FirstController :: testIntArray()
         cout << temp.getFromIndex(index) << " is at spot " << index << endl;
     }
 }
+
+void FirstController :: testListIntro()
+{
+        List<int> sample;
+        sample.addFront(2);
+        sample.addEnd(3);
+        sample.addFront(1);
+        cout << "This should go 1, 2, 3" << endl;
+        
+        for(int index = 0; index < sample.getSize(); index++)
+        {
+            cout << sample.getFromIndex(index) << endl;
+        }
+        
+        cout << "Size should read 3 and is " << sample.getSize() << endl;
+    }
+
