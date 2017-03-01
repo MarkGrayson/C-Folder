@@ -4,7 +4,7 @@
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>30</x>
+      <x>0</x>
       <y>10</y>
       <w>210</w>
       <h>70</h>
@@ -16,7 +16,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
+      <x>840</x>
       <y>0</y>
       <w>410</w>
       <h>240</h>
@@ -41,7 +41,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
+      <x>80</x>
       <y>260</y>
       <w>580</w>
       <h>290</h>
@@ -71,8 +71,8 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>240</y>
+      <x>710</x>
+      <y>260</y>
       <w>720</w>
       <h>380</h>
     </coordinates>
@@ -107,18 +107,18 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
-      <y>380</y>
-      <w>90</w>
-      <h>60</h>
+      <x>650</x>
+      <y>400</y>
+      <w>80</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>60.0;10.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
+      <x>230</x>
       <y>20</y>
       <w>490</w>
       <h>210</h>
@@ -140,7 +140,7 @@ bg=green</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>810</x>
-      <y>690</y>
+      <y>680</y>
       <w>600</w>
       <h>300</h>
     </coordinates>
@@ -169,21 +169,21 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>370</x>
       <y>540</y>
-      <w>720</w>
-      <h>170</h>
+      <w>750</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>700.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>730.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>10</x>
-      <y>610</y>
-      <w>490</w>
-      <h>230</h>
+      <y>660</y>
+      <w>620</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>BiDirectionalNode&lt;Type&gt;
 --
@@ -200,7 +200,77 @@ BiDirectionalNode&lt;Type&gt; * next) : constructor
 + setNodeData(Type data) : void
 + getPreviousNode() : BiDirectionalNode&lt;Type&gt; *
 + getNextNode() : BiDirectionalNode&lt;Type&gt; *
-+ setNextNode(BiDirectionalNode&lt;Type&gt; * next) : void</panel_attributes>
++ setNextNode(BiDirectionalNode&lt;Type&gt; * next) : void
+bg=gray</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1500</x>
+      <y>0</y>
+      <w>540</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>DoublyLinkedList&lt;Type&gt;
+--
+- front : BiDirectionalNode&lt;Type&gt; *
+- end : BiDirectionalNode&lt;Type&gt; *
+- size : int
+--
+Non virtual methods
++ getSize() const : int
++ getFront() const : BiDirectionalNode&lt;Type&gt; *
++ getEnd() const : BiDirectionalNode&lt;Type&gt; *
+
+Virtual methods
++ add(Type value)
++ remove(int)
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1480</x>
+      <y>280</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Queue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1680</x>
+      <y>260</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Stack</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1860</x>
+      <y>260</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>CircularlyLinkedList</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1520</x>
+      <y>220</y>
+      <w>220</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>

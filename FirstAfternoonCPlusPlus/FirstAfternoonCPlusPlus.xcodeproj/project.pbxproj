@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
+		328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		329035B91E53820600A668B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		329035BA1E53820600A668B0 /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
 		329035BB1E53820600A668B0 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 				32F2FA2D1E54E46100296B6B /* Array.h */,
 				32E6119F1E5CD9D100FE313A /* List.hpp */,
 				324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */,
+				328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
