@@ -9,6 +9,7 @@
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
+#include <asseet.h>
 #include "BiDirectionalNode.hpp"
 
 template <class Type>

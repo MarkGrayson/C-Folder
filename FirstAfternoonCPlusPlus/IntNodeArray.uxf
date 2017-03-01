@@ -232,8 +232,8 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1480</x>
-      <y>280</y>
+      <x>1500</x>
+      <y>310</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -243,34 +243,66 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1680</x>
-      <y>260</y>
-      <w>100</w>
-      <h>30</h>
+      <x>1670</x>
+      <y>310</y>
+      <w>160</w>
+      <h>70</h>
     </coordinates>
-    <panel_attributes>Stack</panel_attributes>
+    <panel_attributes>Stack
+--
+
+--
+add(Type data) : void
+remove(int index) : Type</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1860</x>
-      <y>260</y>
-      <w>100</w>
-      <h>30</h>
+      <x>1840</x>
+      <y>310</y>
+      <w>300</w>
+      <h>130</h>
     </coordinates>
-    <panel_attributes>CircularlyLinkedList</panel_attributes>
+    <panel_attributes>CircularlyLinkedList
+--
+- front : BiDirectionalNode *
+--
++ add(Type) : void
++ addAtIndex(int index, Type data) : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1520</x>
+      <x>1540</x>
       <y>220</y>
-      <w>220</w>
-      <h>80</h>
+      <w>230</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>200.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>210.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1740</x>
+      <y>220</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1740</x>
+      <y>220</y>
+      <w>200</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;90.0</additional_attributes>
   </element>
 </diagram>
