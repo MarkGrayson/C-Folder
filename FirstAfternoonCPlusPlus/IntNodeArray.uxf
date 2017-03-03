@@ -212,97 +212,136 @@ bg=gray</panel_attributes>
       <w>540</w>
       <h>230</h>
     </coordinates>
-    <panel_attributes>DoublyLinkedList&lt;Type&gt;
+    <panel_attributes>Model :: DoublyLinkedList&lt;Type&gt;
 --
 - front : BiDirectionalNode&lt;Type&gt; *
 - end : BiDirectionalNode&lt;Type&gt; *
 - size : int
 --
+DoublyLinkedList() : consturctor
+virtual ~DoublyLinkedList() : destructor
+
++ add(Type data) : void
++ remove(int index) : Type
+
 Non virtual methods
 + getSize() const : int
 + getFront() const : BiDirectionalNode&lt;Type&gt; *
 + getEnd() const : BiDirectionalNode&lt;Type&gt; *
-
-Virtual methods
-+ add(Type value)
-+ remove(int)
++ setFront(BiDirectionalNode&lt;Type&gt; front) : void
++ setEnd(BiDirectionalNode&lt;Type&gt; end) : void
++ setSize(int size) : void
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1500</x>
-      <y>310</y>
-      <w>160</w>
-      <h>70</h>
+      <x>1450</x>
+      <y>300</y>
+      <w>390</w>
+      <h>250</h>
     </coordinates>
-    <panel_attributes>Queue</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1670</x>
-      <y>310</y>
-      <w>160</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Stack
+    <panel_attributes>Model :: Queue&lt;Type&gt;
 --
+- front: BiDirectionalNode&lt;Type&gt; *
+- end: BiDirectionalNode&lt;Type&gt; *
+- size : int
 
 --
-add(Type data) : void
-remove(int index) : Type</panel_attributes>
++ Queue() : constructor
++ ~Queue() : destructor
+
++ add(Type data) : void
++ remove(int index) : Type
+
++dequeue() : Type
++enqueue(Type data) : void
++peek() : Type
+bg=black</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1840</x>
-      <y>310</y>
-      <w>300</w>
-      <h>130</h>
+      <x>1860</x>
+      <y>300</y>
+      <w>390</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Model :: Stack&lt;Type&gt;
+--
+- front: BiDirectionalNode&lt;Type&gt; *
+- end: BiDirectionalNode&lt;Type&gt; * 
+- size : int
+
+--
++ Stack() : constructor
++ ~Stack() : destructor
+
++pop() : Type
++push(Type data) : void
++peek() : Type
+
++add(Type data) : void
++remove(int index) : Type
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2280</x>
+      <y>300</y>
+      <w>380</w>
+      <h>250</h>
     </coordinates>
     <panel_attributes>CircularlyLinkedList
 --
-- front : BiDirectionalNode *
+- front : BiDirectionalNode&lt;Type&gt; *
+- end: BiDirectionalNode&lt;Type&gt; *
+- size : int
+
 --
-+ add(Type) : void
-+ addAtIndex(int index, Type data) : void</panel_attributes>
++ CircularList() : constructor
++ ~CircularList() : destructor
+
++ add(Type data) : void
++ addAtIndex(int index, Type data) : void
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1540</x>
+      <x>1490</x>
       <y>220</y>
-      <w>230</w>
-      <h>110</h>
+      <w>280</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>210.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>260.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1740</x>
       <y>220</y>
-      <w>30</w>
-      <h>110</h>
+      <w>220</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;200.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1740</x>
       <y>220</y>
-      <w>200</w>
-      <h>110</h>
+      <w>640</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;620.0;80.0</additional_attributes>
   </element>
 </diagram>

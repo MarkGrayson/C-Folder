@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		321B89951E6A04D1007775B7 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = Model/Queue.h; sourceTree = "<group>"; };
 		324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		328CE8651E6768480034E8D0 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 				324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */,
 				328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */,
 				328CE8651E6768480034E8D0 /* CircularList.hpp */,
+				321B89951E6A04D1007775B7 /* Queue.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
