@@ -25,7 +25,7 @@ public:
     
     //Methods
     int getNodeData();
-    IntNode * getNodePointer();
+    IntNode * getNextPointer();
     
     
     void setNodeData(int value);

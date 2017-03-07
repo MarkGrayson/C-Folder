@@ -23,7 +23,7 @@ public:
     void setNodeData(Type data);
     void setNodePointer(Node<Type>* pointer);
     Type getNodeData();
-    Node<Type> * getNodePointer();
+    Node<Type> * getNextPointer();
 };
 
 /*
@@ -70,7 +70,7 @@ Type Node<Type> :: getNodeData()
 }
 
 template <class Type>
-Node<Type> * Node<Type> :: getNodePointer()
+Node<Type> * Node<Type> :: getNextPointer()
 {
     return this->nodePointer;
 }

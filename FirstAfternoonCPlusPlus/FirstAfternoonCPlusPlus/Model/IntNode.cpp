@@ -41,7 +41,7 @@ int IntNode :: getNodeData()
     return nodeData;
 }
 
-IntNode * IntNode :: getNodePointer()
+IntNode * IntNode :: getNextPointer()
 {
     return this->nodePointer;
 }
