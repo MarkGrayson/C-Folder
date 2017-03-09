@@ -14,7 +14,7 @@
 #include "../Model/IntNodeArray.hpp"
 #include <string>
 #include "../Model/List.hpp"
-#include "../Model/Stack.hpp"
+#include "../Model/Stack.h"
 #include "../Model/DoubleList.hpp"
 #include "../Model/Model/Queue.hpp"
 #include "../Model/CircularList.hpp"

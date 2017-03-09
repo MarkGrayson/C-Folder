@@ -142,7 +142,7 @@ void List<Type> :: addAtIndex(int index, Type value)
 template <class Type>
 Type List<Type> :: setAtIndex(int index, Type data)
 {
-    assett(index >= 0 && index < size);
+    assert(index >= 0 && index < size);
     Type removeData;
     
     Node<Type> * current = front;
