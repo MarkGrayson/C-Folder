@@ -14,6 +14,10 @@
 #include "../Model/IntNodeArray.hpp"
 #include <string>
 #include "../Model/List.hpp"
+#include "../Model/Stack.hpp"
+#include "../Model/DoubleList.hpp"
+#include "../Model/Model/Queue.hpp"
+#include "../Model/CircularList.hpp"
 
 using namespace std;
 
@@ -21,10 +25,13 @@ class FirstController
 {
 private:
     void testIntArray();
-    Node<int> numberNode;
-    Node<string> wordNode;
     void testNodes();
     void testAdvancedFeatures();
+    void testDestructor();
+    void testAdvancedFeatures();
+    void testListIntro();
+    void testDoubleList();
+    void testListTiming();
 public:
     FirstController();
     void start();

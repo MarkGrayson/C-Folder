@@ -79,4 +79,6 @@ void DoublyLinkedList<Type> :: setEnd(BiDirectionalNode<Type> * end)
     
 }
 
+
+
 #endif /* DoublyLinkedList_h */

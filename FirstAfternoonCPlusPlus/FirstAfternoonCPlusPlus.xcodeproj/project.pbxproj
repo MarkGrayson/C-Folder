@@ -41,6 +41,7 @@
 		32A6BA801E36987A00987E03 /* FirstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = Controller/FirstController.h; sourceTree = "<group>"; };
 		32E6119F1E5CD9D100FE313A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		32F2FA2D1E54E46100296B6B /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
+		32FA17F71E71D83100F32EA4 /* DoubleList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DoubleList.h; path = Model/DoubleList.h; sourceTree = "<group>"; };
 		32FCBF8D1E6F4AA000CC8310 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = Model/Stack.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 				328CE8651E6768480034E8D0 /* CircularList.hpp */,
 				321B89951E6A04D1007775B7 /* Queue.h */,
 				32FCBF8D1E6F4AA000CC8310 /* Stack.h */,
+				32FA17F71E71D83100F32EA4 /* DoubleList.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
