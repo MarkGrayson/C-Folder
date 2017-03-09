@@ -34,7 +34,8 @@ public:
     void addEnd(Type value);
     Type getFromIndex(int index);
     Type remove(int index);
-    Type setAtIndex(int index, Type value);
+    Type setAtIndex(int index, Type data);
+    void addAtIndex(int index, Type value);
     bool contains(Type value);
     
 };
@@ -152,15 +153,13 @@ Type List<Type> :: setAtIndex(int index, Type data)
         current = current->getNextPointer();
     }
     
-    removedData = current->getNodeData();
+    removeData = current->getNodeData();
     current->setNodeData(data);
     
-    return removedData;
+    return removeData;
 }
 
 template <class Type>
-Type List<Type> :: getFromIndex(int index)
-{
     Type List<Type> :: remove(int index)
     {
         assert(index >= 0 && index < size);
@@ -174,6 +173,16 @@ Type List<Type> :: getFromIndex(int index)
         {
             toBeRemoved = front;
             this->front = front->getNextPointer();
+        }
+        
+        toBeRemoved = current;
+        previous->setnextPointer(nullptr);
+        this-end = previous;
+        
+        if(index == 0)
+        {
+            toBeRemoved = front;
+            this->front = front->getnextPointer();
         }
         else if (index == size - 1)
         {
@@ -194,9 +203,6 @@ Type List<Type> :: getFromIndex(int index)
                 previous = current;
                 current = current->getNextPointer();
             }
-            
-            toBeRemoved = current;
-        }
         
         toBeRemoved = current;
         current = toBeRemoved->getNextPointer();
@@ -211,9 +217,12 @@ Type List<Type> :: getFromIndex(int index)
     return removed;
 }
 
+
 template <class Type>
 Type List<Type> ::  remove(int index)
-{  }
+{
+    
+}
 
 template <class Type>
 bool List<Type> :: contains(Type findMe)
