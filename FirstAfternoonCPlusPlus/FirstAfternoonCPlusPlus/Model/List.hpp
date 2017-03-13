@@ -34,7 +34,6 @@ public:
     void addEnd(Type value);
     Type getFromIndex(int index);
     Type remove(int index);
-    Type setAtIndex(int index, Type data);
     void addAtIndex(int index, Type value);
     bool contains(Type value);
     
@@ -215,13 +214,6 @@ template <class Type>
     
     size--;
     return removed;
-}
-
-
-template <class Type>
-Type List<Type> ::  remove(int index)
-{
-    
 }
 
 template <class Type>

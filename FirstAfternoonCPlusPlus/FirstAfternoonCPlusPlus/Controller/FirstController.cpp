@@ -6,6 +6,7 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
+#include "../Model/IntNodeArray.hpp"
 #include <iostream>
 #include "FirstController.h"
 
@@ -136,4 +137,26 @@ void FirstController :: testListTiming()
     
     cout << "A time savvings?? of: " << averageSlow - averageFast << " mircoseconds." << endl;
     totalTimer.displayTimeInformation();
+}
+
+void FirstController :: testIntStack()
+{
+    Stack<int> numberStack;
+    numberStack.add(2315);
+    numberStack.push(32);
+    int testValue = numberStack.pop();
+    cout << "Test value is " << testValue << " and should be 32" << endl;
+}
+
+void FirstController :: testFoodQueue()
+{
+    Queue<FoodItem> tastyFood;
+    FoodItem szechwan("spicy chinese dish");
+    
+    tastyFood.enqueue(szechwan);
+    FoodItem boring;
+    tastFood.add(boring);
+    
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The item removed from the queue was: " << << " and should be: " << endl;
 }

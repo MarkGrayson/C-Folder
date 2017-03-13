@@ -9,7 +9,7 @@
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
-#include <asseet.h>
+#include <assert.h>
 #include "BiDirectionalNode.hpp"
 
 template <class Type>
@@ -20,12 +20,12 @@ private:
     BiDirectionalNode<Type> * end;
     int size;
 public:
-    DoubllyLinkedList();
+    DoublyLinkedList();
     virtual DoublyLinkedList() = 0;
     virtual void add(Type data) = 0;
     virtual Type remove(int index) = 0;
     
-    int getSize(); const;
+    int getSize() const;
     BiDirectionalNode<Type> * getFront(); const;
     BiDirectionalNode<Type> * getEnd(); const;
 
