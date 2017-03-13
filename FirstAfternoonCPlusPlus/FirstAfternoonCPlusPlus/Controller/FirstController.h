@@ -15,8 +15,8 @@
 #include <string>
 #include "../Model/List.hpp"
 #include "../Model/Stack.h"
-#include "../Model/DoubleList.hpp"
-#include "../Model/Model/Queue.hpp"
+#include "../Model/DoubleList.h"
+#include "../Model/Queue.h"
 #include "../Model/CircularList.hpp"
 
 using namespace std;
@@ -28,7 +28,6 @@ private:
     void testNodes();
     void testAdvancedFeatures();
     void testDestructor();
-    void testAdvancedFeatures();
     void testListIntro();
     void testDoubleList();
     void testListTiming();

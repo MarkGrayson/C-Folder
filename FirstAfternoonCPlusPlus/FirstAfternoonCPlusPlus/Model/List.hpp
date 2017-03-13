@@ -29,7 +29,7 @@ public:
     Node<Type> * getFront() const;
     Node<Type> * getEnd() const;
     
-    void setAtIndex(int index, Type data);
+    Type setAtIndex(int index, Type data);
     void addFront(Type value);
     void addEnd(Type value);
     Type getFromIndex(int index);

@@ -29,7 +29,7 @@ public:
 template <class Type>
 DoubleList<Type> :: ~DoubleList()
 {
-    BiDrectionalNode<Type> * deleteStructure = this->
+    BiDirectionalNode<Type> * deleteStructure = this->
 }
 
 template <class Type>
