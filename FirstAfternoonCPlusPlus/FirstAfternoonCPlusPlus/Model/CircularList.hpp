@@ -15,26 +15,79 @@ template <class Type>
 class CircularList : public DoublyLinkedList<Type>
 {
 private:
-    //No Need to redefine the private data members!!!
+    BiDirectional<Type> * findNode(int index);
 public:
     CircularList();
     ~CircularList();
-    
     void add(Type data);
     Type remove(int index);
-    //Other methods as needed :D
+    Type getFromeIndex(int index);
+    Type setAtIndex(int index, Type data);
+
 };
 
 template <class Type>
 CircularList<Type> :: CircularList() : DoublyLinkedList<Type>()
 {
-    //deal with circle list stuff only here
+
+}
+
+template <class Type>
+void CircularList<Type> :: ~CircularList()
+{
+    BIDirectionalNode<type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
+}
+
+template <class Type>
+BiDirectionalNode<Type> * CircularList<Type> :: findNode(int index)
+{
+    BiDirectionalNode<Type> * nodeToFind;
+    if(index < this->getSize() / 2)
+    {
+        nodeToFind = this->getFront();
+        for(int spot = 0; spot < index; spot++)
+        {
+            nodeToFind = nodeToFind->getNextPointer();
+        }
+    }
+    else
+    {
+        nodeToFind = this->getEnd();
+        for(int spot = this->getSize() - 1; spot > index; spot--)
+        {
+            nodeToFind = nodeToFind->getPreviousPointer();
+        }
+    }
+    return nodeToFind;
 }
 
 template <class Type>
 void CircularList<Type> :: add(Type data)
 {
+    BiDirectionalNode<Type> * addMe = new BiDirectionalNode<Type>(data);
     
+    if(this->getSize() == 0)
+    {
+        this->setFront(addMe);
+        this->setEnd(addMe);
+        addMe->setPreviousPointer(this->getFront());
+        this->getFront()->setNextPointer(this->getEnd());
+    }
+    else
+    {
+        this->getEnd()->setNextPointer(addMe);
+        addMe->setPreviousPointer(this->getEnd());
+        addMe->setNextPointer(this->getEnd());
+        this->getFront()->setPreviousPointer(addMe);
+        this->setEnd(addMe);
+    }
+    this->setSize(this->getSize() + 1);
 }
 
 #endif /* CircularList_h */
