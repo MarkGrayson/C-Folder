@@ -26,6 +26,7 @@ public:
 
 };
 
+
 template <class Type>
 CircularList<Type> :: CircularList() : DoublyLinkedList<Type>()
 {
