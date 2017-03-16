@@ -109,7 +109,7 @@ void FirstController :: testListTiming()
     
     for(int index = 0; index < 1000; index++)
     {
-        int randomIndex - rand() % 10000;
+        int randomIndex = rand() % 10000;
         doubleTimer.startTimer();
         timingList.getFromIndex(randomIndex);
         doubleTimer.stopTimer();

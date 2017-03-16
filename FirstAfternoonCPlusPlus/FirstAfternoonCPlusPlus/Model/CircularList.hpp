@@ -15,13 +15,13 @@ template <class Type>
 class CircularList : public DoublyLinkedList<Type>
 {
 private:
-    BiDirectional<Type> * findNode(int index);
+    BiDirectionalNode<Type> * findNode(int index);
 public:
     CircularList();
     ~CircularList();
     void add(Type data);
     Type remove(int index);
-    Type getFromeIndex(int index);
+    Type getFromIndex(int index);
     Type setAtIndex(int index, Type data);
 
 };
@@ -34,9 +34,9 @@ CircularList<Type> :: CircularList() : DoublyLinkedList<Type>()
 }
 
 template <class Type>
-void CircularList<Type> :: ~CircularList()
+CircularList<Type> :: ~CircularList()
 {
-    BIDirectionalNode<type> * remove = this->getFront();
+    BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
         this->setFront(this->getFront()->getNextPointer());

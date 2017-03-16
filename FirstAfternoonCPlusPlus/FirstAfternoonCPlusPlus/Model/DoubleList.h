@@ -93,13 +93,13 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     }
     else
     {
-        refernce = this->getEnd();
+        reference = this->getEnd();
         for(int position = this->geSize() -1; position > index; position--)
         {
             reference = reference->setPreviousPointer();
         }
     }
-    valeAtIndex = reference->getNodeData();
+    valueAtIndex = reference->getNodeData();
     return valueAtIndex;
 }
 
