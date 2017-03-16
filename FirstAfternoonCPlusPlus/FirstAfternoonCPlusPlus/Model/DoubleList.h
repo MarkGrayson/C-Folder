@@ -73,8 +73,27 @@ Type DoubleList<Type> :: remove(int index)
     
     delete nodeToTakeOut;
     
-    this->seSize(this->getSize() - 1);
+    this->setSize(this->getSize() - 1);
     return derp;
+}
+
+template <class Type>
+Type DoubleList<Type> :: getAtIndex(int index, Type data)
+{
+    assert(index >= 0 && index < getsize);
+    Type removeData;
+    
+    BiDirectionalNode<Type> * current = getfront;
+    
+    for (int spot = 0; spot < index; spot++)
+    {
+        current = current->getNextPointer();
+    }
+    
+    removeData = current->getNodeData();
+    current->setNodeData(data);
+    
+    return removeData;
 }
 
 template <class Type>
@@ -94,9 +113,9 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     else
     {
         reference = this->getEnd();
-        for(int position = this->geSize() -1; position > index; position--)
+        for(int position = this->getSize() -1; position > index; position--)
         {
-            reference = reference->setPreviousPointer();
+            reference = reference->getPreviousPointer();
         }
     }
     valueAtIndex = reference->getNodeData();

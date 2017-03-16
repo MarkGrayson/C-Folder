@@ -12,6 +12,7 @@
 		329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329035BB1E53820600A668B0 /* IntNodeArray.cpp */; };
 		32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */; };
 		32A6BA7F1E36958F00987E03 /* FirstController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BA7E1E36958F00987E03 /* FirstController.cpp */; };
+		32F5327D1E7B16F4001D4AEE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32F5327B1E7B16F4001D4AEE /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		32A6BA801E36987A00987E03 /* FirstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = Controller/FirstController.h; sourceTree = "<group>"; };
 		32E6119F1E5CD9D100FE313A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		32F2FA2D1E54E46100296B6B /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
+		32F5327B1E7B16F4001D4AEE /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
+		32F5327C1E7B16F4001D4AEE /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = Model/Timer.hpp; sourceTree = "<group>"; };
 		32FA17F71E71D83100F32EA4 /* DoubleList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DoubleList.h; path = Model/DoubleList.h; sourceTree = "<group>"; };
 		32FCBF8D1E6F4AA000CC8310 /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = Model/Stack.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,8 @@
 				32FA17F71E71D83100F32EA4 /* DoubleList.h */,
 				3222E2861E7711EE00A1944C /* FoodItem.cpp */,
 				3222E2871E7711EE00A1944C /* FoodItem.hpp */,
+				32F5327B1E7B16F4001D4AEE /* Timer.cpp */,
+				32F5327C1E7B16F4001D4AEE /* Timer.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				329035BE1E53820600A668B0 /* IntNode.cpp in Sources */,
 				329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */,
 				32A6BA7F1E36958F00987E03 /* FirstController.cpp in Sources */,
+				32F5327D1E7B16F4001D4AEE /* Timer.cpp in Sources */,
 				32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */,
 				3222E2881E7711EE00A1944C /* FoodItem.cpp in Sources */,
 			);

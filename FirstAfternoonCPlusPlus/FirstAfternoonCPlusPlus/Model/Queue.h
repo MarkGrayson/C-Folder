@@ -65,7 +65,7 @@ void Queue<Type> :: add(Type value)
 template <class Type>
 void Queue<Type> :: enqueue(Type insertedValue)
 {
-    BiDirectionalNode<Type> * added = BiDirectionalNode<Type>(insertedValue);
+    BiDirectionalNode<Type> * added = new BiDirectionalNode<Type>(insertedValue);
     
     if(this->getSize() == 0 || this->getFront() == nullptr || this->getEnd() == nullptr)
     {

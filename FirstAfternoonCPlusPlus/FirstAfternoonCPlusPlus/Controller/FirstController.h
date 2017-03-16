@@ -18,7 +18,8 @@
 #include "../Model/DoubleList.h"
 #include "../Model/Queue.h"
 #include "../Model/CircularList.hpp"
-#include "../Model/Timer
+#include "../Model/Timer.hpp"
+#include "../Model/FoodItem.hpp"
 
 using namespace std;
 
@@ -32,6 +33,10 @@ private:
     void testListIntro();
     void testDoubleList();
     void testListTiming();
+    void testIntStack();
+    void testFoodQueue();
+    Node<int> numberNode;
+    Node<string> wordNode;
 public:
     FirstController();
     void start();

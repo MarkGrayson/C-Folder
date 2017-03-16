@@ -14,18 +14,21 @@ using namespace std;
 
 FirstController ::  FirstController()
 {
-    
+    wordNode = Node<string>("derpy mcderpface");
+    numberNode = Node<int>();
 }
 
 void FirstController :: testNodes()
 {
-//    cout << "The contents of the Node<string>" << endl;
-//    cout << wordNode.getNodeData() << endl;
-//    cout << "Here is the Node<int>" << endl;
-//    cout << numberNode.getNodeData() << endl;
+    cout << "The contents of the Node<string>" << endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
 void FirstController :: start()
 {
+    cout << "Starting the project" << endl;
+    
     cout << "Going to test the Array Template" << endl;
     testAdvancedFeatures();
     cout << "Finished testing" << endl;
@@ -136,8 +139,8 @@ void FirstController :: testListTiming()
     cout << "The average speed for the getFromIndexFast method was: " << averageFast <<
     "microseconds." << endl;
     
-    cout << "A time savvings?? of: " << averageSlow - averageFast << " mircoseconds." << endl;
-    totalTimer.displayTimeInformation();
+    cout << "A time savings?? of: " << averageSlow - averageFast << " mircoseconds." << endl;
+    totalTimer.displayTimerInformation();
 }
 
 void FirstController :: testIntStack()
@@ -156,8 +159,9 @@ void FirstController :: testFoodQueue()
     
     tastyFood.enqueue(szechwan);
     FoodItem boring;
-    tastFood.add(boring);
+    tastyFood.add(boring);
     
     FoodItem removed = tastyFood.dequeue();
-    cout << "The item removed from the queue was: " << << " and should be: " << endl;
+    cout << "The item removed from the queue was: " << " and should be: " << endl;
 }
+
