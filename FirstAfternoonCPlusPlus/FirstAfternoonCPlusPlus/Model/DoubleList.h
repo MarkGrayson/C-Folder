@@ -27,6 +27,13 @@ public:
 };
 
 template <class Type>
+DoubleList<Type> :: DoubleList()
+{
+    
+    
+}
+
+template <class Type>
 DoubleList<Type> :: ~DoubleList()
 {
     BiDirectionalNode<Type> * remove = this->getFront();
@@ -57,7 +64,33 @@ void DoubleList<Type> :: add(Type value)
 template<class Type>
 void DoubleList<Type> :: addAtIndex(int index, Type value)
 {
-    
+    assert(index >= 0 && index <= this->getSize());
+           if(index == 0)
+           {
+               addFront(value);
+           }
+           else if(index == 0)
+           {
+               addEnd(value);
+           }
+           else
+           {
+               Node<Type> * insertedNode = new Node<Type>(value);
+               Node<Type> * current = this->getFront();
+               Node<Type> * previous = nullptr;
+               
+               for(int position = 0; position < index; position++)
+               {
+                   previous = current;
+                   current = current->getnextPointer();
+               }
+               
+               previous->setnextPointer(insertedNode);
+               insertedNode->seetnextPointer(current);
+               
+               this->getSize() + 1;
+           }
+           
 }
 
 template <class Type>
@@ -97,12 +130,39 @@ Type DoubleList<Type> :: remove(int index)
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNodeData();
+    if(this->getSize() > 1)
+    {
     
     BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
     BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
     
+        if(prev != nullptr)
+        {
+            prev->setNextPointer(next);
+        }
+        if(next != nullptr)
+        {
+            next->setPreviousPointer(prev);
+        }
     prev->setNextPointer(next);
     next->setPreviousPointer(prev);
+    
+    if(index == 0)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        this->getFront()->setPreviousPointer(nullptr);
+    }
+    else if(index  == this->getSize() - 1);
+    {
+        this->setEnd(this->getEnd()->getPreviousPointer());
+        this->getEnd()->setNextPointer(nullptr);
+    }
+    }
+    else
+    {
+        this->setFront(nullptr);
+        this->setEnd(nullptr);
+    }
     
     delete nodeToTakeOut;
     
