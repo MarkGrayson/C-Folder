@@ -74,13 +74,23 @@ void BinarySearchTree<Type> :: inOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    if(preStrat != nullptr)
+    {
+        cout << "Node Contents: " << preStart->getNodeData() << endl;
+        preOrderTraversal(preStart->getLeftChild());
+        preOrderTraversal(preStart->getRightChild());
+    }
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    
+    if(postStart != nullptr)
+    {
+        postOrderTraversal(postStart->getLeftChild());
+        postOrderTraversal(postStart->getRightChild());
+        cout << "Node Contents: " << postStart->getNodeData() << endl;
+    }
 }
 
 template <class Type>
@@ -88,13 +98,24 @@ int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 {
     return -99;
 }
-
+/*
+ In Ordeer traversal goes in the order Left, Root, Right
+ Notic that the non-recursive case does NOTHING
+ */
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inStart)
 {
-    
+    if(inStart != nullptr)
+    {
+        inOrderTraversal(inStart->getLeftChild());
+        cout << "Node Contents: " << inStart->getNodeData() << endl;
+        inOrderTraversal(inStart->getRightChild());
+    }
 }
-
+/*
+ Pre order traversal goes in the order Root, Left, Right 
+ Notice that the non-recursive case does NOTHING
+ */
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * preStart)
 {
@@ -148,6 +169,97 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
             previous->setRightChild(insertMe);
         }
         insertMe->setRootPointer(previous);
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: demoTraversalSteps(BinarySearchTreeNode<Type> * node)
+{
+    
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: contains(Type itemToFind)
+{
+    BinarySearchTreeNode<Type> * current = root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            if(itemToFind == current->getNodeData())
+            {
+                return true;
+            }
+            else if (itemToFind < current->getNodeData())
+            {
+                current = current->getLeftChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        return false;
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRideOfMe)
+{
+    if(root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinarySearchTreeNode<Type> * current = root;
+        BinarySearchTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getNodeData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if(getRidOfMe < current->getNodeData())
+                {
+                    current = current->getLeftChild():
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+        }
+        
+        if(current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if(hasBeenFound)
+        {
+            if(current == root)
+            {
+                removeNode(root);
+            }
+            else if(getRideOfMe < previous->getNodeData())
+            {
+                removeNode(previous->getLeftChild());
+            }
+            else
+            {
+                
+                removeNode(previous->getRightChild());
+            }
+        }
     }
 }
 
