@@ -32,6 +32,9 @@
 		3222E2861E7711EE00A1944C /* FoodItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoodItem.cpp; path = Model/FoodItem.cpp; sourceTree = "<group>"; };
 		3222E2871E7711EE00A1944C /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = Model/FoodItem.hpp; sourceTree = "<group>"; };
 		324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
+		325E110A1E9D53F200C1CFDB /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTreeNode.h; sourceTree = "<group>"; };
+		325E110B1E9D580800C1CFDB /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		325E110D1E9D5C0700C1CFDB /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
 		328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		328CE8651E6768480034E8D0 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
 		329035B91E53820600A668B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
@@ -92,6 +95,9 @@
 				3222E2871E7711EE00A1944C /* FoodItem.hpp */,
 				32F5327B1E7B16F4001D4AEE /* Timer.cpp */,
 				32F5327C1E7B16F4001D4AEE /* Timer.hpp */,
+				325E110A1E9D53F200C1CFDB /* BinarySearchTreeNode.h */,
+				325E110B1E9D580800C1CFDB /* Tree.h */,
+				325E110D1E9D5C0700C1CFDB /* BinarySearchTree.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
