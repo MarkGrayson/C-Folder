@@ -20,6 +20,9 @@
 #include "../Model/CircularList.hpp"
 #include "../Model/Timer.hpp"
 #include "../Model/FoodItem.hpp"
+#include "../Model/BinarySearchTreeNode.h"
+#include "../Model/BinarySearchTree.h"
+#include "../Model/Tree.h"
 
 using namespace std;
 
