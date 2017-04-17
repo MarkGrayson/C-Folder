@@ -377,21 +377,21 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1820</x>
+      <x>1680</x>
       <y>820</y>
-      <w>40</w>
-      <h>110</h>
+      <w>90</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>20.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1470</x>
-      <y>910</y>
-      <w>690</w>
-      <h>380</h>
+      <x>1530</x>
+      <y>840</y>
+      <w>620</w>
+      <h>480</h>
     </coordinates>
     <panel_attributes>Model :: BinarySearchTree&lt;Type&gt;
 --
@@ -412,6 +412,18 @@ bg=magenta</panel_attributes>
 -inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
 - preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
 - postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
+- removeNode(BinarySearchTreeNode&lt;Type&gt; *) : void
+
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void
++ printToFile() : void
+
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
+
++ demoTraversalSteps(BinarySearchTreeNode&lt;Type&gt; *) : void
 bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
@@ -445,6 +457,7 @@ bg=pink</panel_attributes>
 + inOrderTraversal() : void
 + preOrderTraversal(): void
 + postOrderTraversal() : void
++ printToFile() : void
 bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
