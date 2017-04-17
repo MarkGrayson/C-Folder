@@ -21,11 +21,15 @@ private:
     BinarySearchTreenNode<Type> * root;
     
     int calcualteSize(BinarySearchTreeNode<Type> * root);
+    int calculateHeight(BinarySearchTreeNode<Type> * root);
+    bool isBalanced(BinarySearchTreeNode<Type> * root);
+    bool isComplete(BinarySearchTreeNode<Type> * root);
+    
     void inOrderTraversal(BinarySearchTreeNode<Type> * inStart);
     void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
-    void removeNode(BinarySearchTreeNode<Type> * & removeMe);
+    void removeNode(BinarySearchTreeNode<Type> * removeMe);
     
 public:
     BinarySearchTree();
@@ -38,9 +42,12 @@ public:
     void preOrderTraversal();
     void postOrderTraversal();
     
-    void printToFile();
-    
     void demoTraversaSteps(BinarySearchTreeNode<Type> * node);
+    
+    int getSize();
+    int getHeight();
+    bool isComplete();
+    bool isBalanced();
     
     bool contains(Type value);
     void insert(Type intemToInsert);
