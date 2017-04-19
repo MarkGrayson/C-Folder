@@ -19,17 +19,33 @@ public:
     DoubleList();
     ~DoubleList();
     void add(Type data);
-    Type remove(int index);
     void addAtIndexFast(int index, Type value);
     void addAtIndex(int index, Type value);
-    Type getFromIndex(int index);
+    Type remove(int index);
     Type getFromIndexFast(int index);
-};
-
-template <class Type>
-DoubleList<Type> :: DoubleList()
-{
+    Type getFromIndex(int index);
+    int indexOf(Type findMe);
+    int nextIndexOf(Type value, int position);
+    int alternateIndexOf(Type findMe);
+    );
     
+template <class Type>
+int DoubleList<Type> :: indexOf(Type findMe)
+{
+    int index = -1;
+    
+    BiDirectionalNode<Type>* searchPointer = this->getFront();
+    
+    for(int spot = 0; spot < this->getSize(); spot++)
+    {
+        if(findMe == searchPointer->getNodeData())
+        {
+            return spot;
+        }
+        searchPointer = searchPointer->getNextPOinter();
+    }
+    
+    return index;
     
 }
 
