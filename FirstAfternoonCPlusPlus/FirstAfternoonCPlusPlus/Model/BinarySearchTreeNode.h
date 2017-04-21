@@ -42,10 +42,24 @@ BinarySearchTreeNode<Type> :: BinarySearchTreeNode() : Node<Type>()
 }
 
 template <class Type>
+BinarySearchTreeNode<Type> :: BinarySearchTreeNode(Type data) : Node<Type>(data)
+{
+    this->root = nullptr;
+    this->leftChild = nullptr;
+    this->rightaChild = nullptr;
+}
+
+template <class Type>
 BinarySearchTreeNode<Type> :: ~BinarySearchTreeNode()
 {
     delete leftChild;
     delete rightChild;
+}
+
+template <class Type>
+BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
+{
+    return this->root;
 }
 
 template <class Type>
@@ -64,12 +78,6 @@ template <class Type>
 void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type>* root)
 {
     this->root = root;
-}
-
-template<class Type>
-BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
-{
-    return this->root;
 }
 
 template <class Type>

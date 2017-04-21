@@ -377,29 +377,25 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1680</x>
+      <x>1740</x>
       <y>820</y>
-      <w>70</w>
-      <h>40</h>
+      <w>90</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;20.0</additional_attributes>
+    <additional_attributes>70.0;10.0;10.0;30.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1530</x>
-      <y>840</y>
-      <w>620</w>
-      <h>480</h>
+      <x>1450</x>
+      <y>850</y>
+      <w>680</w>
+      <h>720</h>
     </coordinates>
     <panel_attributes>Model :: BinarySearchTree&lt;Type&gt;
 --
-- root : BinarySearchTreeNode&lt;Type&gt; *
-- size : int(inherited)
-- height : int(inherited)
-- complete : bool(inherited)
-- balanced : bool(inherited)
+# root : BinarySearchTreeNode&lt;Type&gt;
 --
 + BinarySearchTree() : constructor
 + ~BinarySearchTree(): destructor
@@ -407,31 +403,49 @@ bg=magenta</panel_attributes>
 + getRoot() : BinarySearchTreeNode&lt;Type&gt; *
 + setRoot(BinarySearchTreeNode&lt;Type&gt; * root) : void
 
-- calculateSize(BinarySearchTreeNode&lt;Type&gt; *) : int
+Resursive Helper Methods
+# calculateSize(BinarySearchTreeNode&lt;Type&gt; *):int
+# calculateHeight(BinarySearchTreeNode&lt;Type&gt; *):int
+# isComplete(BinarySearchTreeNode&lt;Type&gt; *, int index, int size): bool
+# isBalanced(BinarySearchTreeNode&lt;Type&gt; *): bool
 
--inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-- preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-- postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *) : void
-- removeNode(BinarySearchTreeNode&lt;Type&gt; *) : void
+# removeNode(BinarySearchTreeNode&lt;Type&gt; *): void
 
-+ inOrderTraversal() : void
-+ preOrderTraversal() : void
-+ postOrderTraversal() : void
-+ printToFile() : void
+# inOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *): void
+# preOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *): void
+# postOrderTraversal(BinarySearchTreeNode&lt;Type&gt; *): void
 
-+ insert(Type) : void
-+ contains(Type) : bool
-+ remove(Type) : void
+# getLeftMostChild(BinarySearchTreeNode&lt;Type&gt; ): void
+# getRightMostChild(BinarySearchTreeNode&lt;Type&gt; *): BinarySearchTreeNode&lt;Type&gt; *
 
-+ demoTraversalSteps(BinarySearchTreeNode&lt;Type&gt; *) : void
-bg=pink</panel_attributes>
+Informational
++ getSize(): int
++ getHeight(): int
++ isBalanced(): bool
++ isComplete(): bool
+
+Traversal
++ inOrderTraversal(): void
++ preOrderTraversal(): void
++ postOrderTraversal(): void
+
+Data Operations
++ insert(Type): void
++ contains(Type): bool
++ remove(Type): void
++ findMinimum(): Type
++ findMaximum(); Type
+
+Demo only
++ demoTraversalSteps(BinarSearchTreeNode&lt;Type&gt; *): void
+bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2200</x>
-      <y>640</y>
+      <x>2170</x>
+      <y>610</y>
       <w>500</w>
       <h>350</h>
     </coordinates>
@@ -459,6 +473,30 @@ bg=pink</panel_attributes>
 + postOrderTraversal() : void
 + printToFile() : void
 bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2370</x>
+      <y>1020</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Model :: AVLTree&lt;Type&gt;
+--
+
++ AVLTree(): constructor
++ ~AVLTree(): destructor
+
+AVL Rotations
+- leftRotations(BinarySearchTreeNode&lt;Type&gt; * parent): BinarySearchTreeNode&lt;Type&gt; *
+- rightRotation(BinarySearchTreeNode&lt;Type&gt; * first): BinarySearchTreeNode&lt;Type&gt; *
+- leftRightRotation(BinarySearchTreeNode&lt;Type&gt; * first): BinarySearchTreeNode&lt;Type&gt; *
+- rightLeftRotation(BinarySearchTreeNode&lt;Type&gt; * first): BinarySearchTreeNode&lt;Type&gt; *
+
+Helper Methods
+- </panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

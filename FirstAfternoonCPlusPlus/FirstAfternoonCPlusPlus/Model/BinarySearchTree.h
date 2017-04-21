@@ -30,6 +30,9 @@ protected:
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     void removeNode(BinarySearchTreeNode<Type> * removeMe);
     
+    BinarySearchTreeNode<Type> * getRightMostChild(BinarySearchTreeNode<Type> * current);
+    BinarySearchTreeNode<Type> * getLeftMostChild(BinarySearchTreeNode<Type> * current);
+    
 public:
     BinarySearchTree();
     ~BinarySearchTree();
@@ -49,12 +52,21 @@ public:
     bool contains(Type value);
     void insert(Type intemToInsert);
     void remove(Type value);
+    
+    Type findMinimum();
+    Type findMaximum();
 };
 
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree() : Tree<Type>()
 {
     this->root = nullptr;
+}
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    delete root;
 }
 
 template <class Type>
@@ -72,7 +84,7 @@ void BinarySearchTree<Type> :: setRoot(BinarySearchTreeNode<Type> * root)
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
-    
+    inOrderTraversal(root);
 }
 
 template <class Type>
