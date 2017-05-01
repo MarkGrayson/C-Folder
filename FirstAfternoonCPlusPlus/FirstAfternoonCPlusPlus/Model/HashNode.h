@@ -9,8 +9,6 @@
 #ifndef HashNode_h
 #define HashNode_h
 
-
-
 template <class Type>
 class HashNode
 {
