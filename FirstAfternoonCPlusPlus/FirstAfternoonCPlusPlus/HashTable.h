@@ -44,6 +44,12 @@ HashTable<Type> :: HashTable()
     this->hashTableStorage = HashNode<Type> * [capacity];
 }
 
+template<class Type>
+long HashTable<Type> :: getSize()
+{
+    return size;
+}
+
 template <class Type>
 HashTable<Type> :: ~HashTable()
 {
@@ -129,6 +135,80 @@ void HashTable<Type> :: displayContents()
             cout << hashTable[index]->getData()
             << endl;
         }
+    }
+}
+
+template <class Type>
+bool HashTable<Type> :: remove(Type data)
+{
+    bool removed = false;
+    
+    HashNode<Type> * find(data);
+    long hashIndex = findPosition(find);
+    
+    if(hashTableStorage[hashIndex] != nullptr)
+    {
+        hashTableStorage[hashIndex] = nullptr;
+        removed = true;
+        this->size--;
+    }
+    
+    
+    return removed;
+}
+
+template <class Type>
+void HashTable<Type> :: resize()
+{
+    long updatedCapacity = nextPrime();
+    HashNode<Type> ** tempStorage = new HashNode<Type> * [updatedCapacity];
+    
+    std :: fill_n(tempStorage = new HashNode<Type> * [ypdatedCapacity]);
+    
+    long oldCapacity = this->capacity;
+    this->capacity = updatedCapacity;
+    
+    for(long index = 0; index < oldcapacity; index++)
+    {
+        if(hashTableStorage[index] != nullptr)
+        {
+            long position = findPosition(temp);
+            if(tempStorage[position] == nullptr)
+            {
+                tempStorage[position] = temp;
+            }
+            else
+            {
+                long updatePosition = handleCollision(tmep, position);
+                tempStorage[updatedPosition] = temp;
+            }
+        }
+            
+    }
+    
+    hashTableStorage = tempStorage;
+}
+
+template <class Type>
+void HashTable<Type> :: add(Type data)
+{
+    this->size++;
+    if(((this->size * 1.000) / this->capacity) > this->efficiencyPercentage)
+    {
+        resize();
+    }
+    
+    HashNode<Type> * temp = new HashNode<Type>(data);
+    long index = findPosition(temp);
+    
+    if(hashTableStorage[index] == nullptr)
+    {
+        hashTableStorage[index] = temp;
+    }
+    else
+    {
+        long updatedPosition = handleCollision(temp, index);
+        hashTableStorage[updatedPosition] = temp;
     }
 }
 

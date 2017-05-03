@@ -13,7 +13,7 @@
 #include "BinarySearchTee.hpp"
 
 template <class Type>
-class AVLTree : public BinarSearchTree<Type>
+class AVLTree : public BinarySearchTree<Type>
 {
 private:
     
@@ -35,8 +35,8 @@ private:
     void removeNode(BinarySearchTreeNdoe<Type> * removeMe);
     
 public:
-    BinarySearchTree();
-    ~BianrySearchTree();
+    AVLTree();
+    ~AVLTree();
     
     
     void insert(Type itemToInsert);
