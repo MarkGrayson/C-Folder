@@ -9,8 +9,8 @@
 #ifndef BinarySearchTree_h
 #define BinarySearchTree_h
 
-#include "Tree.hpp"
-#include "BinarySearchTreeNode.hpp"
+#include "Tree.h"
+#include "BinarySearchTreeNode.h"
 #include <iostream>
 using namespace std;
 
@@ -18,7 +18,7 @@ template <class Type>
 class BinarySearchTree : public Tree<Type>
 {
 protected:
-    BinarySearchTreenNode<Type> * root;
+    BinarySearchTreeNode<Type> * root;
     
     int calcualteSize(BinarySearchTreeNode<Type> * root);
     int calculateHeight(BinarySearchTreeNode<Type> * root);
@@ -90,7 +90,7 @@ void BinarySearchTree<Type> :: inOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    if(preStrat != nullptr)
+    if(preStart != nullptr)
     {
         cout << "Node Contents: " << preStart->getNodeData() << endl;
         preOrderTraversal(preStart->getLeftChild());

@@ -27,8 +27,14 @@ public:
     int indexOf(Type findMe);
     int nextIndexOf(Type value, int position);
     int alternateIndexOf(Type findMe);
-    );
+};
+
+template <class Type>
+DoubleList<Type> :: DoubleList()
+{
     
+}
+
 template <class Type>
 int DoubleList<Type> :: indexOf(Type findMe)
 {
@@ -56,8 +62,8 @@ DoubleList<Type> :: ~DoubleList()
     while(this->getFront() != nullptr)
     {
         this->setFront(this->getFront()->getNextPointer());
-                       delete remove;
-                       remove = this->getFront();
+        delete remove;
+        remove = this->getFront();
 }
                        }
 template <class Type>
@@ -137,6 +143,27 @@ void DoubleList<Type> :: addAtIndexFast(int index,Type value)
 }
 
 template <class Type>
+int DoubleList<Type> :: nextIndexOf(Type value, int position)
+{
+    assert(position >= 0 && position < this->getSize());
+    
+    int nextIndex = -1;
+    
+    BiDirectionalNode<Type> * current = this->getFront();
+    
+    for(int index = 0; index < this->getSize(); index++)
+    {
+        if(current->getNodeData() == value)
+        {
+            return index;
+        }
+        current = current->getNextPointer();
+        
+    }
+    return nextIndex;
+}
+
+template <class Type>
 Type DoubleList<Type> :: remove(int index)
 {
     Type derp;
@@ -168,7 +195,7 @@ Type DoubleList<Type> :: remove(int index)
         this->setFront(this->getFront()->getNextPointer());
         this->getFront()->setPreviousPointer(nullptr);
     }
-    else if(index  == this->getSize() - 1);
+    else if(index  == this->getSize() - 1)
     {
         this->setEnd(this->getEnd()->getPreviousPointer());
         this->getEnd()->setNextPointer(nullptr);
@@ -233,9 +260,10 @@ int DoubleList<Type> :: alternateIndexOf(Type findMe)
 {
     int alternate = 0;
     
-    for (BiDirectionalNode<Type> * search = this->getFront);
-    search != nullptr;
-    search = search->getNextPointer())
+    for (BiDirectionalNode<Type> * search = this->getFront();
+         search != nullptr;
+         search = search->getNextPointer())
+        
     {
         if (findMe != search->getNodeData())
         {
