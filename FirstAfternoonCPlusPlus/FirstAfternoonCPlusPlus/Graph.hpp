@@ -30,9 +30,12 @@ public:
     void addVertex(const Type& value);
     void addEdge(int source, int target);
     void removeEdge(int source, int target);
+    void addEdgeUndirected(int source, int target);
+    void removeEdgeUndirected(int source, int target);
     Type& operator [] (int vertex);
     Type operator [] (int vertex) const;
     int size() const;
+    bool areConnected(int source, int target) const;
     bool areConnected(int source, int target) const;
     std::set<int> neighbors(int vertex) const;
     void depthFirstTraversal(Graph<Type> graph, int vertex);
@@ -113,5 +116,94 @@ Type Graph<Type> :: operator[](int vertex) const
     assert(vertex < size());
     return graphData[vertex];
 }
+
+template <class Type>
+std::set<int> Graph<Type> :: neighbors(int vertex) const
+{
+    assert(vertex < size());
+    std::set<int> vertexNeighbors;
+    
+    for(int index = 0; index < size(); index++)
+    {
+        if(adjacencyMatrix[vertex][index])
+        {
+            vertexNeighbors.insert(index);
+        }
+    }
+    return vertexNeighbors;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdge(int source, int target)
+{
+    assert(source < size() && target < size());
+    adjacencyMatrix[source][target] = false;
+}
+
+template <class Type>
+void Graph<Type> :: addEdge(int source, int target)
+{
+    assert(source < size() && target < size());
+    adjacencyMatrix[source][target] = true;
+    adjacencyMatrix[target][source] = true;
+}
+
+template <clas Type>
+void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
+{
+    bool visitedVertices[MAXIMUM];
+    assert(vertex < currentGraph.size());
+    std::fill_n(visitedVertices, currentGraph.size(), false);
+    depthFirstTraversal(currentGraph, vertex, visitedVertices);
+}
+
+template <class Type>
+void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * visited)
+{
+    std::set<int> connections = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    visited[vertex] = true;
+    cout << currentGraph[vertex] << ", " << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        if(!visited[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, visited);
+        }
+    }
+}
+
+template <class Type>
+void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
+{
+    assert(vertex < currentGraph.size());
+    bool visited[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>::interator setIterator;
+    std::queue<int> vertexQueue;
+    
+    std::fill_n(visited,currentGraph.size(),false);
+    visited[vertex] = true;
+    cout<< currentGraph[vertex] << endl;
+    vertexQueue.push(vertex);
+    while (!vertexQueue.empty())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!visited[*setIterator])
+            {
+                visited[*setIterator] = true;
+                cout << currentGraph[*setIterator] << endl;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
+}
+
 
 #endif /* Graph_h */
