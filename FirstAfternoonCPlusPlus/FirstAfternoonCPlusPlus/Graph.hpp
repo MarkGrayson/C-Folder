@@ -40,7 +40,26 @@ public:
 };
 
 
+template <class Type>
+const int Graph<Type> :: MAXIMUM;
 
+template <class Type>
+Graph<Type> :: Graph()
+{
+    this->vertexCount = 0;
+}
 
+template <class Type>
+Graph<Type> :: ~Graph()
+{
+    delete [] this->adjacencyMatrix;
+    delete [] this->graphData;
+}
+
+template <class Type>
+int Graph<Type> :: size() const
+{
+    return vertexCount;
+}
 
 #endif /* Graph_h */
