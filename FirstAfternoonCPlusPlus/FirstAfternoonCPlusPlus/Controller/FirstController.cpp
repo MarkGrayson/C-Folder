@@ -423,3 +423,20 @@ AVLTree<CrimeData> FileController :: readCrimeDataToAVLTree(string filename)
     
 }
 
+Graph<string> connectWords;
+
+connectWords.addVertex ("Video Games");
+connectWords.addVertex ("Halo CE");
+connectWords.addVertex ("Call of Duty");
+connectWords.addVertex ("The Legend of Zelda");
+connectWords.addVertex ("Evolve");
+connectWords.addVertex (" -> is the return indicator");
+connectWords.addVertex (" * is the dereference");
+
+connectWords.addEdge (0,1);
+connectWords.addEdge (0,2);
+connectWords.addEdge (0,3);
+connectWords.addEdge (0,4);
+connectWords.addEdgeUndirected (2,6);
+connectWords.addEdgeUndirected (4,5);
+
