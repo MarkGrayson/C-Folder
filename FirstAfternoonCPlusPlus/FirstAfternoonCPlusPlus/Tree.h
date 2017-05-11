@@ -6,12 +6,8 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#ifndef Tree_h
+#ifndef Tree_h 
 #define Tree_h
-
-#include <assert.h>
-// //  Tree.hpp //  MorningMegaProject // //  Created by Cody Henrichsen on 3/30/17. //  Copyright Â© 2017 CTEC. All rights reserved. //
-#ifndef Tree_h #define Tree_h
 #include <assert.h>
 template <class Type>
 class Tree
@@ -29,5 +25,8 @@ public:
     //Data Methods
     virtual bool contains(Type value) = 0;
     virtual void insert(Type itemToInsert) = 0;
-    virtual void remove(Type value) = 0; }; #endif
-/* Tree_h */#endif /* Tree_h */
+    virtual void remove(Type value) = 0;
+};
+
+#endif
+

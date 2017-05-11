@@ -20,7 +20,7 @@ class BinarySearchTree : public Tree<Type>
 protected:
     BinarySearchTreeNode<Type> * root;
     
-    int calcualteSize(BinarySearchTreeNode<Type> * root);
+    int calculateSize(BinarySearchTreeNode<Type> * root);
     int calculateHeight(BinarySearchTreeNode<Type> * root);
     bool isBalanced(BinarySearchTreeNode<Type> * root);
     bool isComplete(BinarySearchTreeNode<Type> * root, int index, int size);
@@ -90,23 +90,13 @@ void BinarySearchTree<Type> :: inOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    if(preStart != nullptr)
-    {
-        cout << "Node Contents: " << preStart->getNodeData() << endl;
-        preOrderTraversal(preStart->getLeftChild());
-        preOrderTraversal(preStart->getRightChild());
-    }
+    preOrderTraversal(root);
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    if(postStart != nullptr)
-    {
-        postOrderTraversal(postStart->getLeftChild());
-        postOrderTraversal(postStart->getRightChild());
-        cout << "Node Contents: " << postStart->getNodeData() << endl;
-    }
+    postOrderTraversal(root);
 }
 
 template <class Type>
@@ -133,15 +123,24 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inS
  Notice that the non-recursive case does NOTHING
  */
 template <class Type>
-void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * preStart)
+void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * preStart)
 {
-    
+    if(preStart != nullptr)
+    {
+        cout << "Node Contents: " << preStart->getNodeData() << endl;
+        preOrderTraversal(preStart->getLeftChild());
+        preOrderTraversal(preStart->getRightChild());
+    }
 }
-
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * postStart)
 {
-    
+    if(postStart != nullptr)
+    {
+        postOrderTraversal(postStart->getLeftChild());
+        postOrderTraversal(postStart->getRightChild());
+        cout << "Node Contents: " << postStart->getNodeData() << endl;
+    }
 }
 
 template <class Type>
@@ -176,7 +175,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
             }
         }
         
-        if (previous->getNodeData() > itemToInset)
+        if (previous->getNodeData() > itemToInsert)
         {
             previous->setLeftChild(insertMe);
         }
@@ -188,11 +187,6 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
     }
 }
 
-template <class Type>
-void BinarySearchTree<Type> :: demoTraversalSteps(BinarySearchTreeNode<Type> * node)
-{
-    
-}
 
 template <class Type>
 bool BinarySearchTree<Type> :: contains(Type itemToFind)
@@ -266,7 +260,7 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
             {
                 removeNode(root);
             }
-            else if(getRideOfMe < previous->getLeftChild())
+            else if(getRidOfMe < previous->getLeftChild())
             {
                 removeNode(previous->getLeftChild());
             }
@@ -279,7 +273,7 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: removeNode(Type getRideOfMe)
+void BinarySearchTree<Type> :: removeNode(Type getRidOfMe)
 {
     if(root == nullptr)
     {
@@ -321,7 +315,7 @@ void BinarySearchTree<Type> :: removeNode(Type getRideOfMe)
             {
                 removeNode(root);
             }
-            else if(getRideOfMe < previous->getNodeData())
+            else if(getRidOfMe < previous->getNodeData())
             {
                 removeNode(previous->getLeftChild());
             }
@@ -349,8 +343,8 @@ int BinarySearchTree<Type> :: getHeight()
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced()
 {
-    int LeftHeight = 0;
-    in rightHeight = 0;
+    int leftHeight = 0;
+    int rightHeight = 0;
     
     if(start == nullptr)
     {
@@ -397,7 +391,7 @@ int BinarySearchTree<Type> :: calculateHeight(BinarySearchTreeNode<Type> * start
     }
     else
     {
-        return 1 + mas(calcualteHeight(start->getLeftChild()), calculateHeight(start->
+        return 1 + mas(calculateHeight(start->getLeftChild()), calculateHeight(start->
                                                                                getRightChild()));
     }
 }
