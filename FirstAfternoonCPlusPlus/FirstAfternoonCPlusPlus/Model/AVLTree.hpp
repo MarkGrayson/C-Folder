@@ -9,8 +9,8 @@
 #ifndef AVLTree_h
 #define AVLTree_h
 
-#include "BinarySearchTreeNode.hpp"
-#include "BinarySearchTee.hpp"
+#include "BinarySearchTreeNode.h"
+#include "BinarySearchTree.h"
 
 template <class Type>
 class AVLTree : public BinarySearchTree<Type>
@@ -30,14 +30,12 @@ private:
     int heightDifference(BinarySearchTreeNode<Type> * parent);
     
     BinarySearchTreeNode<Type> * getRightMostChild(BinarySearchTreeNode<Type> * current);
-    BinarySearchTreeNode<type> * getLeftMostChild(BinarySearchTreeNode<Type> * current);
+    BinarySearchTreeNode<Type> * getLeftMostChild(BinarySearchTreeNode<Type> * current);
     
-    void removeNode(BinarySearchTreeNdoe<Type> * removeMe);
-    
+       
 public:
     AVLTree();
     ~AVLTree();
-    
     
     void insert(Type itemToInsert);
     void remove(Type value);
@@ -72,7 +70,7 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: rightRotation (BinarySearchTreeNod
     BinarySearchTreeNode<Type> * changedNode;
     changedNode = parent->getRightChild();
     
-    paretn->setRightChild(changedNode->getLeftChild());
+    parent->setRightChild(changedNode->getLeftChild());
     
     changedNode->setLeftChild(parent);
     
@@ -154,7 +152,7 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Ty
     }
     else if(inserted > parent->getNodeData())
     {
-        parent->setRightChild(insertNode(parent->getRightChild(), insetted));
+        parent->setRightChild(insertNode(parent->getRightChild(), inserted));
         parent = balanceSubTree(parent);
     }
     return parent;

@@ -99,11 +99,6 @@ void BinarySearchTree<Type> :: postOrderTraversal()
     postOrderTraversal(root);
 }
 
-template <class Type>
-int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
-{
-    return -99;
-}
 /*
  In Ordeer traversal goes in the order Left, Root, Right
  Notic that the non-recursive case does NOTHING
@@ -273,7 +268,7 @@ void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: removeNode(Type getRidOfMe)
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * getRidOfMe)
 {
     if(root == nullptr)
     {
@@ -296,7 +291,7 @@ void BinarySearchTree<Type> :: removeNode(Type getRidOfMe)
                 previous = current;
                 if(getRidOfMe < current->getNodeData())
                 {
-                    current = current->getLeftChild():
+                    current = current->getLeftChild();
                 }
                 else
                 {
@@ -341,7 +336,7 @@ int BinarySearchTree<Type> :: getHeight()
 }
 
 template <class Type>
-bool BinarySearchTree<Type> :: isBalanced()
+bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
 {
     int leftHeight = 0;
     int rightHeight = 0;

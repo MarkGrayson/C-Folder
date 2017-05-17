@@ -11,24 +11,34 @@
 
 #include "../Model/Node.hpp"
 #include "../Model/Array.h"
-#include "../Model/IntNodeArray.hpp"
-#include <string>
 #include "../Model/List.hpp"
 #include "../Model/Stack.h"
-#include "../Model/DoubleList.h"
 #include "../Model/Queue.h"
+#include "../Model/FoodItem.hpp"
 #include "../Model/CircularList.hpp"
 #include "../Model/Timer.hpp"
-#include "../Model/FoodItem.hpp"
-#include "../Model/BinarySearchTreeNode.h"
+#include "../Model/DoubleList.h"
+#include "../Model/BiDirectionalNode.hpp"
 #include "../Model/BinarySearchTree.h"
-#include "../Model/Tree.h"
+#include "../Model/BinarySearchTreeNode.h"
+#include "../Tree.h"
+#include "../Model/AVLTree.hpp"
+#include "../Model/Graph.hpp"
+#include "../Model/CrimeData.hpp"
+#include "../Model/HashNode.hpp"
+#include "../Model/HashTable.hpp"
+#include <fstream>
+#include <string>
 
 using namespace std;
 
 class FirstController
 {
 private:
+    void testAVLTreeOperations();
+    void testBinarySearchData();
+    void testAVLData();
+    void testBinarySearchTreeOperations();
     void testIntArray();
     void testNodes();
     void testAdvancedFeatures();
@@ -42,6 +52,8 @@ private:
     Node<string> wordNode;
 public:
     FirstController();
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
     void start();
     
 };

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3222E2881E7711EE00A1944C /* FoodItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3222E2861E7711EE00A1944C /* FoodItem.cpp */; };
+		325D33961ECCCC4100539D69 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 325D33941ECCCC4100539D69 /* CrimeData.cpp */; };
+		325D33991ECCD81800539D69 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 325D33971ECCD81800539D69 /* FileController.cpp */; };
 		329035BE1E53820600A668B0 /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329035B91E53820600A668B0 /* IntNode.cpp */; };
 		329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329035BB1E53820600A668B0 /* IntNodeArray.cpp */; };
 		32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */; };
@@ -33,6 +35,10 @@
 		3222E2871E7711EE00A1944C /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = Model/FoodItem.hpp; sourceTree = "<group>"; };
 		324A0EA11EA7EEE500097B04 /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = AVLTree.hpp; path = Model/AVLTree.hpp; sourceTree = "<group>"; };
 		324E33041E64C72F00F1B95B /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
+		325D33941ECCCC4100539D69 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CrimeData.cpp; path = Model/CrimeData.cpp; sourceTree = "<group>"; };
+		325D33951ECCCC4100539D69 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CrimeData.hpp; path = Model/CrimeData.hpp; sourceTree = "<group>"; };
+		325D33971ECCD81800539D69 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
+		325D33981ECCD81800539D69 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		325E110A1E9D53F200C1CFDB /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinarySearchTreeNode.h; path = Model/BinarySearchTreeNode.h; sourceTree = "<group>"; };
 		325E110B1E9D580800C1CFDB /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		325E110D1E9D5C0700C1CFDB /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinarySearchTree.h; path = Model/BinarySearchTree.h; sourceTree = "<group>"; };
@@ -75,6 +81,8 @@
 				32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */,
 				32A6BA7E1E36958F00987E03 /* FirstController.cpp */,
 				32A6BA801E36987A00987E03 /* FirstController.h */,
+				325D33971ECCD81800539D69 /* FileController.cpp */,
+				325D33981ECCD81800539D69 /* FileController.hpp */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -106,6 +114,8 @@
 				329D2FDB1EB7B2D50085BC1C /* HashTable.h */,
 				329D2FDC1EB7B7DA0085BC1C /* HashNode.h */,
 				32AB992E1EC235130090F71E /* Graph.hpp */,
+				325D33941ECCCC4100539D69 /* CrimeData.cpp */,
+				325D33951ECCCC4100539D69 /* CrimeData.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -194,10 +204,12 @@
 			files = (
 				329035BE1E53820600A668B0 /* IntNode.cpp in Sources */,
 				329035BF1E53820600A668B0 /* IntNodeArray.cpp in Sources */,
+				325D33961ECCCC4100539D69 /* CrimeData.cpp in Sources */,
 				32A6BA7F1E36958F00987E03 /* FirstController.cpp in Sources */,
 				32F5327D1E7B16F4001D4AEE /* Timer.cpp in Sources */,
 				32A6BA7D1E36936F00987E03 /* AfternoonRunner.cpp in Sources */,
 				3222E2881E7711EE00A1944C /* FoodItem.cpp in Sources */,
+				325D33991ECCD81800539D69 /* FileController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
