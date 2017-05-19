@@ -21,12 +21,12 @@
 #include "../Model/BiDirectionalNode.hpp"
 #include "../Model/BinarySearchTree.h"
 #include "../Model/BinarySearchTreeNode.h"
-#include "../Tree.h"
+#include "../Model/Tree.h"
 #include "../Model/AVLTree.hpp"
 #include "../Model/Graph.hpp"
 #include "../Model/CrimeData.hpp"
-#include "../Model/HashNode.hpp"
-#include "../Model/HashTable.hpp"
+#include "../Model/HashNode.h"
+#include "../Model/HashTable.h"
 #include <fstream>
 #include <string>
 
@@ -35,6 +35,7 @@ using namespace std;
 class FirstController
 {
 private:
+    void testGraph();
     void testAVLTreeOperations();
     void testBinarySearchData();
     void testAVLData();

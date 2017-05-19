@@ -40,8 +40,8 @@
 		325D33971ECCD81800539D69 /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
 		325D33981ECCD81800539D69 /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		325E110A1E9D53F200C1CFDB /* BinarySearchTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinarySearchTreeNode.h; path = Model/BinarySearchTreeNode.h; sourceTree = "<group>"; };
-		325E110B1E9D580800C1CFDB /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		325E110D1E9D5C0700C1CFDB /* BinarySearchTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinarySearchTree.h; path = Model/BinarySearchTree.h; sourceTree = "<group>"; };
+		328829231ECF6EFA007A8436 /* FirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = Controller/FirstController.h; sourceTree = "<group>"; };
 		328CE8641E675D590034E8D0 /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		328CE8651E6768480034E8D0 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
 		329035B91E53820600A668B0 /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
@@ -49,13 +49,13 @@
 		329035BB1E53820600A668B0 /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		329035BC1E53820600A668B0 /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
 		329035BD1E53820600A668B0 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Node.hpp; path = Model/Node.hpp; sourceTree = "<group>"; };
-		329D2FDB1EB7B2D50085BC1C /* HashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		329D2FDB1EB7B2D50085BC1C /* HashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = Model/HashTable.h; sourceTree = "<group>"; };
 		329D2FDC1EB7B7DA0085BC1C /* HashNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HashNode.h; path = Model/HashNode.h; sourceTree = "<group>"; };
 		32A6BA721E368F9C00987E03 /* FirstAfternoonCPlusPlus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FirstAfternoonCPlusPlus; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AfternoonRunner.cpp; path = Controller/AfternoonRunner.cpp; sourceTree = "<group>"; };
 		32A6BA7E1E36958F00987E03 /* FirstController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirstController.cpp; path = Controller/FirstController.cpp; sourceTree = "<group>"; };
-		32A6BA801E36987A00987E03 /* FirstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstController.h; path = Controller/FirstController.h; sourceTree = "<group>"; };
-		32AB992E1EC235130090F71E /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		32A6BA801E36987A00987E03 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tree.h; path = Model/Tree.h; sourceTree = "<group>"; };
+		32AB992E1EC235130090F71E /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Graph.hpp; path = Model/Graph.hpp; sourceTree = "<group>"; };
 		32E6119F1E5CD9D100FE313A /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		32F2FA2D1E54E46100296B6B /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Array.h; path = Model/Array.h; sourceTree = "<group>"; };
 		32F5327B1E7B16F4001D4AEE /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
@@ -78,9 +78,9 @@
 		329035B71E5381D700A668B0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				328829231ECF6EFA007A8436 /* FirstController.h */,
 				32A6BA7C1E36936F00987E03 /* AfternoonRunner.cpp */,
 				32A6BA7E1E36958F00987E03 /* FirstController.cpp */,
-				32A6BA801E36987A00987E03 /* FirstController.h */,
 				325D33971ECCD81800539D69 /* FileController.cpp */,
 				325D33981ECCD81800539D69 /* FileController.hpp */,
 			);
@@ -108,7 +108,6 @@
 				32F5327B1E7B16F4001D4AEE /* Timer.cpp */,
 				32F5327C1E7B16F4001D4AEE /* Timer.hpp */,
 				325E110A1E9D53F200C1CFDB /* BinarySearchTreeNode.h */,
-				325E110B1E9D580800C1CFDB /* Tree.h */,
 				325E110D1E9D5C0700C1CFDB /* BinarySearchTree.h */,
 				324A0EA11EA7EEE500097B04 /* AVLTree.hpp */,
 				329D2FDB1EB7B2D50085BC1C /* HashTable.h */,
@@ -116,6 +115,7 @@
 				32AB992E1EC235130090F71E /* Graph.hpp */,
 				325D33941ECCCC4100539D69 /* CrimeData.cpp */,
 				325D33951ECCCC4100539D69 /* CrimeData.hpp */,
+				32A6BA801E36987A00987E03 /* Tree.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";

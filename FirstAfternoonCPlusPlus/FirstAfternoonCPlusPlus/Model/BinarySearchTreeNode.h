@@ -46,7 +46,7 @@ BinarySearchTreeNode<Type> :: BinarySearchTreeNode(Type data) : Node<Type>(data)
 {
     this->root = nullptr;
     this->leftChild = nullptr;
-    this->rightaChild = nullptr;
+    this->rightChild = nullptr;
 }
 
 template <class Type>
@@ -83,7 +83,7 @@ void BinarySearchTreeNode<Type> :: setRootPointer(BinarySearchTreeNode<Type>* ro
 template <class Type>
 void BinarySearchTreeNode<Type> :: setLeftChild(BinarySearchTreeNode<Type> * left)
 {
-    this>leftChild = left;
+    this->leftChild = left;
 }
 
 template <class Type>

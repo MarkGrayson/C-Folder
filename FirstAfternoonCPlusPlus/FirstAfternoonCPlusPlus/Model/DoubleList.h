@@ -10,8 +10,9 @@
 #define DoubleList_h
 
 #include "DoublyLinkedList.hpp"
+#include <assert.h>
 
-template <class Type>
+template<class Type>
 class DoubleList : public DoublyLinkedList<Type>
 {
 private:
@@ -21,21 +22,21 @@ public:
     void add(Type data);
     void addAtIndexFast(int index, Type value);
     void addAtIndex(int index, Type value);
-    Type remove(int index);
     Type getFromIndexFast(int index);
+    Type remove(int index);
     Type getFromIndex(int index);
     int indexOf(Type findMe);
     int nextIndexOf(Type value, int position);
     int alternateIndexOf(Type findMe);
 };
 
-template <class Type>
+template<class Type>
 DoubleList<Type> :: DoubleList()
 {
     
 }
 
-template <class Type>
+template<class Type>
 int DoubleList<Type> :: indexOf(Type findMe)
 {
     int index = -1;
@@ -48,101 +49,38 @@ int DoubleList<Type> :: indexOf(Type findMe)
         {
             return spot;
         }
-        searchPointer = searchPointer->getNextPOinter();
+        searchPointer = searchPointer->getNextpointer();
     }
     
     return index;
-    
-}
-
-template <class Type>
-DoubleList<Type> :: ~DoubleList()
-{
-    BiDirectionalNode<Type> * remove = this->getFront();
-    while(this->getFront() != nullptr)
-    {
-        this->setFront(this->getFront()->getNextPointer());
-        delete remove;
-        remove = this->getFront();
-}
-                       }
-template <class Type>
-void DoubleList<Type> :: add(Type value)
-{
-    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode<Type>(value);
-    if(this->getSize() == 0)
-    {
-        this->setFront(addedNode);
-    }
-    else
-    {
-        this->getEnd()->setNextPointer(addedNode);
-        addedNode->setPreviousPointer(this->getEnd());
-    }
-    this->setEnd(addedNode);
-    this->setSize(this->getSize() + 1);
 }
 
 template<class Type>
-void DoubleList<Type> :: addAtIndex(int index, Type value)
+int DoubleList<Type> :: alternateIndexOf(Type findMe)
 {
-    assert(index >= 0 && index <= this->getSize());
-           if(index == 0)
-           {
-               addFront(value);
-           }
-           else if(index == 0)
-           {
-               addEnd(value);
-           }
-           else
-           {
-               Node<Type> * insertedNode = new Node<Type>(value);
-               Node<Type> * current = this->getFront();
-               Node<Type> * previous = nullptr;
-               
-               for(int position = 0; position < index; position++)
-               {
-                   previous = current;
-                   current = current->getnextPointer();
-               }
-               
-               previous->setnextPointer(insertedNode);
-               insertedNode->seetnextPointer(current);
-               
-               this->getSize() + 1;
-           }
-           
-}
-
-template <class Type>
-void DoubleList<Type> :: addAtIndexFast(int index,Type value)
-{
-    asset(index >= 0 && index < this->getSize());
-    Type valueAtIndex;
-    BiDirectionalNode<Type> * reference;
-    if(index < this->getSize() / 2)
+    int alternate = 0;
+    
+    for(BiDirectionalNode<Type> * search = this->getFront();
+        search != nullptr;
+        search = search->getNextPointer())
+        
     {
-        reference = this->getFront();
-        for(int position = 0; position < index; position++)
+        if(findMe != search->getNodeData())
         {
-            reference = reference->getNextPointer();
+            alternate++;
         }
+    }
+    if(alternate >= this->getSize())
+    {
+        return -1;
     }
     else
     {
-        reference = this->getend();
-        for(int position = this->getSize() - 1; position < index; position--)
-        {
-            reference = reference->getPreviousPointer();
-        }
+        return alternate;
     }
-    
-    valueAtIndex = reference->getNodeData();
-    return valueAtIndex;
 }
 
-template <class Type>
+template<class Type>
 int DoubleList<Type> :: nextIndexOf(Type value, int position)
 {
     assert(position >= 0 && position < this->getSize());
@@ -161,24 +99,130 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
         
     }
     return nextIndex;
+    
 }
 
-template <class Type>
-Type DoubleList<Type> :: remove(int index)
+template<class Type>
+void DoubleList<Type> :: add(Type value)
+{
+    BiDirectionalNode<Type> * addedNode = new BiDirectionalNode<Type>(value);
+    if(this->getSize() == 0)
+    {
+        this->setFront(addedNode);
+    }
+    else
+    {
+        this->getEnd()->setNextPointer(addedNode);
+        addedNode->setPreviousPointer(this->getEnd());
+    }
+    this->setEnd(addedNode);
+    this->setSize(this->getSize() + 1);
+}
+
+template<class Type>
+DoubleList<Type> :: ~DoubleList()
+{
+    BiDirectionalNode<Type> * remove = this->getFront();
+    while(this->getFront() != nullptr)
+    {
+        this->setFront(this->getFront()->getNextPointer());
+        delete remove;
+        remove = this->getFront();
+    }
+    
+}
+
+template<class Type>
+void DoubleList<Type> :: addAtIndex(int index, Type value)
+{
+    assert(index >= 0 && index <= this->getSize());
+    if(index == 0)
+    {
+        addFront(value);
+    }
+    else if(index == 0)
+    {
+        addEnd(value);
+    }
+    else
+    {
+        Node<Type> * insertedNode = new Node<Type>(value);
+        Node<Type> * current = this->getFront();
+        Node<Type> * previous = nullptr;
+        
+        for(int position = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getnextPointer();
+        }
+        
+        previous->setnextPointer(insertedNode);
+        insertedNode->setnextPointer(current);
+        
+        this->getSize() + 1;
+    }
+    
+}
+
+template<class Type>
+void DoubleList<Type> :: addAtIndexFast(int index, Type value)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type valueAtIndex;
+    BiDirectionalNode<Type> * reference;
+    if(index < this->getSize() / 2)
+    {
+        reference = this->getFront();
+        for(int position = 0; position < index; position++)
+        {
+            reference = reference->getNextPoiner();
+        }
+    }
+    else
+    {
+        reference = this->getEnd();
+        for(int position = this->getSize() - 1; position > index;  position--)
+        {
+            reference = reference->getPreviousPointer();
+        }
+    }
+    
+    valueAtIndex = reference->getNodeData();
+    return valueAtIndex;
+    
+}
+
+template<class Type>
+Type DoubleList<Type> :: getFromIndex(int index)
+{
+    assert(index >= 0 && index < this->getSize());
+    Type valueAtIndex;
+    
+    BiDirectionalNode<Type> * reference = this->getFront();
+    for(int position = 0; position < index; position++)
+    {
+        reference = reference->getNextPointer();
+    }
+    valueAtIndex = reference->getNodeData();
+    
+    return valueAtIndex;
+}
+
+template<class Type>
+Type DoubleList<Type>:: remove(int index)
 {
     Type derp;
-    BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
-    for(int spot = 0; spot < index; spot++)
+    BiDirectionalNode<Type>* nodeToTakeOut = this->getFront();
+    for(int spot =  0; spot< index; spot++)
     {
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
-    derp = nodeToTakeOut->getNodeData();
+    derp= nodeToTakeOut->getNodeData();
     if(this->getSize() > 1)
     {
-    
-    BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
-    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
-    
+        BiDirectionalNode<Type>* prev = nodeToTakeOut->getPreviousPointer();
+        BiDirectionalNode<Type>* next = nodeToTakeOut->getNextPointer();
+        
         if(prev != nullptr)
         {
             prev->setNextPointer(next);
@@ -187,19 +231,16 @@ Type DoubleList<Type> :: remove(int index)
         {
             next->setPreviousPointer(prev);
         }
-    prev->setNextPointer(next);
-    next->setPreviousPointer(prev);
-    
-    if(index == 0)
-    {
-        this->setFront(this->getFront()->getNextPointer());
-        this->getFront()->setPreviousPointer(nullptr);
-    }
-    else if(index  == this->getSize() - 1)
-    {
-        this->setEnd(this->getEnd()->getPreviousPointer());
-        this->getEnd()->setNextPointer(nullptr);
-    }
+        if(index == 0)
+        {
+            this->setFront(this->getFront()->getNextPointer());
+            this->getFront()->getPreviousPointer();
+        }
+        else if(index == this->getSize() - 1)
+        {
+            this->setEnd(this->getEnd()->getPreviousPointer());
+            this->getEnd()->setNextPointer(nullptr);
+        }
     }
     else
     {
@@ -213,28 +254,12 @@ Type DoubleList<Type> :: remove(int index)
     return derp;
 }
 
-template <class Type>
-Type DoubleList<Type> :: getFromIndex(int index)
-{
-    assert(index >= 0 && index < this->getSize());
-    Type valueAtIndex;
-    
-    BiDirectionalNode<Type> * reference = this->getFront();
-    for (int position = 0; position < index; position++)
-    {
-        reference = reference->getNextPointer();
-    }
-    valueAtIndex = reference->getNodeData();
-    
-    return valueAtIndex;
-}
-
-template <class Type>
+template<class Type>
 Type DoubleList<Type> :: getFromIndexFast(int index)
 {
-    assert(index >= 0 && index < this->getSize());
+    assert(index >=0 && index < this->getSize());
     Type valueAtIndex;
-    BiDirectionalNode<Type> * reference;
+    BiDirectionalNode<Type>* reference;
     if(index < this->getSize() / 2)
     {
         reference = this->getFront();
@@ -255,29 +280,5 @@ Type DoubleList<Type> :: getFromIndexFast(int index)
     return valueAtIndex;
 }
 
-template <class Type>
-int DoubleList<Type> :: alternateIndexOf(Type findMe)
-{
-    int alternate = 0;
-    
-    for (BiDirectionalNode<Type> * search = this->getFront();
-         search != nullptr;
-         search = search->getNextPointer())
-        
-    {
-        if (findMe != search->getNodeData())
-        {
-            alternate++;
-        }
-    }
-    if(alternate >= this->getSize())
-    {
-        return -1;
-    }
-    else
-    {
-        return alternate;
-    }
-}
 
 #endif /* DoubleList_h */

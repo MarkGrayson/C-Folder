@@ -6,9 +6,27 @@
 //  Copyright © 2017 Palesh, Mark. All rights reserved.
 //
 
-#include "../Model/IntNodeArray.hpp"
-#include <iostream>
 #include "FirstController.h"
+#include <iostream>
+#include "../Model/Node.hpp"
+#include "../Model/Array.h"
+#include "../Model/Timer.hpp"
+#include "../Model/IntNodeArray.hpp"
+#include "../Model/List.hpp"
+#include "../Model/DoubleList.h"
+#include "../Model/Queue.h"
+#include "../Model/Stack.h"
+#include "../Model/BiDirectionalNode.hpp"
+#include "../Model/CircularList.hpp"
+#include "../Model/Tree.hpp"
+#include "../Model/BinarySearchTree.h"
+#include "../Model/BinarySearchTreeNode.h"
+#include "../Model/CrimeData.hpp"
+#include "../Controller/FileController.hpp"
+#include "../Model/AVLTree.hpp"
+#include "../Model/Graph.hpp"
+#include "../Model/Hashtable.h"
+#include <string>
 
 using namespace std;
 
@@ -81,18 +99,18 @@ void FirstController :: testIntArray()
 
 void FirstController :: testListIntro()
 {
-        List<int> sample;
-        sample.addFront(2);
-        sample.addEnd(3);
-        sample.addFront(1);
+        List<int> getFromIndex;
+        getFromIndex.addFront(2);
+        getFromIndex.addEnd(3);
+        getFromIndex.addFront(1);
         cout << "This should go 1, 2, 3" << endl;
         
-        for(int index = 0; index < sample.getSize(); index++)
+        for(int index = 0; index < getFromIndex.getSize(); index++)
         {
-            cout << sample.getFromIndex(index) << endl;
+            cout << getFromIndex.getFromIndex(index) << endl;
         }
         
-        cout << "Size should read 3 and is " << sample.getSize() << endl;
+        cout << "Size should read 3 and is " << getFromIndex.getSize() << endl;
     }
 
 void FirstController :: testListTiming()
@@ -229,7 +247,7 @@ void FirstController :: testBinarySearchData()
     
     treeTimer.displayTimerInformation();
 }
-void StructureTester :: testAVLTreeOperations()
+void FirstController :: testAVLTreeOperations()
 
 {
     
@@ -256,11 +274,11 @@ void StructureTester :: testAVLTreeOperations()
 }
 
 
-void StructureTester :: testAVLData()
+void FirstController :: testAVLData()
 
 {
     
-    FileController fileData;
+    FirstController fileData;
     Timer treeTimer;
     treeTimer.startTimer();
     AVLTree<CrimeData> crimeTree = fileData.readCrimeDataToAVLTree("/Users/cody.henrichsen/Documents/crimes.csv");
@@ -353,8 +371,9 @@ AVLTree<CrimeData> FirstController :: readCrimeDataToAVLTree(string filename)
     
 }
 
-Graph<string> connectWords;
-
+void FirstController :: testGraph()
+{
+    Graph<string> connectWords;
 connectWords.addVertex ("Video Games");
 connectWords.addVertex ("Halo CE");
 connectWords.addVertex ("Call of Duty");
@@ -369,4 +388,5 @@ connectWords.addEdge (0,3);
 connectWords.addEdge (0,4);
 connectWords.addEdgeUndirected (2,6);
 connectWords.addEdgeUndirected (4,5);
+}
 

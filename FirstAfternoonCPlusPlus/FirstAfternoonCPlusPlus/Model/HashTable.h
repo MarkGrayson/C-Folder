@@ -11,7 +11,7 @@
 
 #include <cmath>
 #include <assert.h>
-#include "HashNode.hpp"
+#include "HashNode.h"
 
 using namespace std;
 template <class Type>
@@ -20,6 +20,7 @@ class HashTable
 private:
     long capacity;
     long size;
+    long getSize();
     double efficiencyPercentage;
     HashNode<Type> ** hashTableStorage;
     bool isPrime(long smapleNumber);
@@ -31,6 +32,7 @@ public:
     HashTable();
     ~HashTable();
     void add(Type data);
+    int getNextPrime();
     bool remove(Type data);
     void displayContents();
 };
@@ -41,7 +43,7 @@ HashTable<Type> :: HashTable()
     this->capacity = 101;
     this->efficiencyPercentage = .667;
     this->size = 0;
-    this->hashTableStorage = HashNode<Type> * [capacity];
+    this->hashTableStorage = new HashNode<Type> * [capacity];
 }
 
 template<class Type>
@@ -132,8 +134,7 @@ void HashTable<Type> :: displayContents()
     {
         if(hashTableStorage[index] != nullptr)
         {
-            cout << hashTable[index]->getData()
-            << endl;
+            cout << hashTableStorage[index]->getData() << endl;
         }
     }
 }
@@ -163,24 +164,24 @@ void HashTable<Type> :: resize()
     long updatedCapacity = nextPrime();
     HashNode<Type> ** tempStorage = new HashNode<Type> * [updatedCapacity];
     
-    std :: fill_n(tempStorage = new HashNode<Type> * [ypdatedCapacity]);
+    std :: fill_n(tempStorage = new HashNode<Type> * [updatedCapacity]);
     
     long oldCapacity = this->capacity;
     this->capacity = updatedCapacity;
     
-    for(long index = 0; index < oldcapacity; index++)
+    for(long index = 0; index < oldCapacity; index++)
     {
         if(hashTableStorage[index] != nullptr)
         {
-            long position = findPosition(temp);
+            long position = findPosition(tempStorage);
             if(tempStorage[position] == nullptr)
             {
-                tempStorage[position] = temp;
+                tempStorage[position] = tempStorage;
             }
             else
             {
-                long updatePosition = handleCollision(tmep, position);
-                tempStorage[updatedPosition] = temp;
+                long updatePosition = handleCollision(tempStorage, position);
+                tempStorage[updatePosition] = tempStorage;
             }
         }
             
