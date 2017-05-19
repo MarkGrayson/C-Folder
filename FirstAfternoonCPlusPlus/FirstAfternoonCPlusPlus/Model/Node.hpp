@@ -44,6 +44,8 @@ Node<Type> :: Node(Type data)
     this->nodePointer = nullptr;
 }
 
+
+
 template <class Type>
 Node<Type> :: Node(Type data, Node<Type> * pointer)
 {

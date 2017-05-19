@@ -43,6 +43,7 @@ void FirstController :: testNodes()
     cout << "Here is the Node<int>" << endl;
     cout << numberNode.getNodeData() << endl;
 }
+
 void FirstController :: start()
 {
     cout << "Starting the project" << endl;
@@ -99,18 +100,19 @@ void FirstController :: testIntArray()
 
 void FirstController :: testListIntro()
 {
-        List<int> getFromIndex;
-        getFromIndex.addFront(2);
-        getFromIndex.addEnd(3);
-        getFromIndex.addFront(1);
+        List<int> sample;
+        sample.addFront(2);
+        sample.addEnd(3);
+        sample.addFront(1);
         cout << "This should go 1, 2, 3" << endl;
         
-        for(int index = 0; index < getFromIndex.getSize(); index++)
+        for(int index = 0; index < sample.getSize(); index++)
         {
-            cout << getFromIndex.getFromIndex(index) << endl;
+            cout << sample.getFromIndex(index) << endl;
+            cout << sample.remove(1) << endl;
         }
         
-        cout << "Size should read 3 and is " << getFromIndex.getSize() << endl;
+        cout << "Size should read 3 and is " << sample.getSize() << endl;
     }
 
 void FirstController :: testListTiming()

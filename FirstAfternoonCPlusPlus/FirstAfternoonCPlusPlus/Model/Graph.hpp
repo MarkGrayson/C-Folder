@@ -148,6 +148,14 @@ void Graph<Type> :: addEdge(int source, int target)
 }
 
 template<class Type>
+void Graph<Type> :: addEdgeUndirected(int source, int target)
+{
+    assert(source < size() && target < size());
+    adjacencyMatrix[source][target] = true;
+    adjacencyMatrix[target][source] = true;
+}
+
+template<class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
     bool visitedVerticies[MAXIMUM];
